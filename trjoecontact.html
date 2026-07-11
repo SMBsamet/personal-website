@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta name="google-adsense-account" content="ca-pub-6088430077678432">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6088430077678432"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>İletişim - Usta Yazılım Mimarı</title>
+  <meta name="description" content="50 yıllık deneyime sahip usta yazılım mimarı ile iletişime geçin." />
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #0a0a0a;
+      --bg-card: #141414;
+      --text-primary: #f0f0f0;
+      --text-secondary: #a0a0a0;
+      --accent-primary: #00ddb3;
+      --accent-hover: #00ffc8;
+      --border-color: #262626;
+      --gradient: linear-gradient(90deg, #00ddb3 0%, #00aaff 100%);
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .navbar {
+      background-color: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      animation: fadeInDown 1s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .navbar-brand {
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 700;
+      color: var(--accent-primary);
+      font-size: 2rem;
+      letter-spacing: 1px;
+      transition: color .3s;
+    }
+    .navbar-brand:hover { color: var(--accent-hover);}
+    .navbar-nav .nav-link {
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+      color: var(--accent-primary);
+    }
+    .nav-link-back {
+      color: #ff6b6b !important;
+      font-weight: 700;
+      font-style: italic;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      width: 100%;
+    }
+    h1 {
+      font-size: 2.6rem;
+      color: var(--accent-primary);
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 2rem;
+      letter-spacing: -1px;
+    }
+    .contact-card {
+      background: var(--bg-card);
+      border-radius: 18px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 8px 32px rgba(0,221,179,0.08);
+      padding: 2.5rem 2rem;
+      margin-bottom: 3rem;
+      animation: fadeInUp 1.2s;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .contact-intro {
+      color: var(--text-secondary);
+      font-size: 1.18rem;
+      margin-bottom: 2.2rem;
+      text-align: center;
+      line-height: 1.7;
+    }
+    form label {
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+    .form-control {
+      background-color: #181f23;
+      border: 1px solid var(--border-color);
+      color: #f0f0f0;
+      border-radius: 8px;
+      font-size: 1.08rem;
+    }
+    .form-control:focus {
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 0.2rem rgba(0,221,179,0.15);
+      background: #181f23;
+      color: #fff;
+    }
+    .btn-primary {
+      background: var(--gradient);
+      color: #000;
+      border: none;
+      font-weight: 700;
+      border-radius: 8px;
+      padding: 0.8rem 2.5rem;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      color: #000;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 6px 18px rgba(0,221,179,0.13);
+    }
+    .contact-info {
+      margin-top: 2.5rem;
+      color: var(--text-secondary);
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .contact-info i {
+      color: var(--accent-primary);
+      margin-right: 0.6rem;
+    }
+    .alert-success, .alert-danger {
+      margin-top: 1.2rem;
+      border-radius: 8px;
+      font-size: 1.08rem;
+      text-align: center;
+    }
+    .faq-section {
+      background: var(--bg-card);
+      border-radius: 18px;
+      border: 1px solid var(--border-color);
+      padding: 2.5rem 2rem;
+      margin-bottom: 3rem;
+      animation: fadeInUp 1.2s;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .faq-section h2 {
+      color: var(--accent-primary);
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .faq-section .accordion-button {
+      background: #181f23;
+      color: var(--accent-primary);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .faq-section .accordion-button:not(.collapsed) {
+      background: var(--accent-primary);
+      color: #181f23;
+    }
+    .faq-section .accordion-body {
+      background: #181f23;
+      color: var(--text-secondary);
+    }
+    .partners {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin: 3rem 0;
+      animation: fadeInUp 1.2s;
+    }
+    .partner-logo {
+      height: 48px;
+      filter: grayscale(1) brightness(1.2);
+      opacity: 0.7;
+      transition: filter 0.3s, opacity 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+    .partner-logo:hover {
+      filter: none;
+      opacity: 1;
+      transform: scale(1.12) rotate(-2deg);
+    }
+    footer {
+      background-color: var(--bg-card);
+      border-top: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.95rem;
+      margin-top: 2rem;
+      animation: fadeInUp 1.2s;
+    }
+    footer a {
+      color: var(--accent-primary);
+      margin: 0 0.5rem;
+      font-size: 1.4rem;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: var(--accent-hover);
+    }
+    .footer-links a {
+      font-size: 1rem;
+      margin: 0 1rem;
+    }
+    @media (max-width: 767px) {
+      main { margin: 1.5rem auto;}
+      .contact-card, .faq-section { padding: 1.5rem 0.7rem;}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="trjoeindex.html">VeteranDev.</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+        <li class="nav-item"><a class="nav-link" href="trjoeindex.html">Anasayfa</a></li>
+        <li class="nav-item"><a class="nav-link" href="trjoeabout.html">Hakkında</a></li>
+        <li class="nav-item"><a class="nav-link" href="trjoeprojects.html">Projeler</a></li>
+        <li class="nav-item"><a class="nav-link active" href="trjoecontact.html">İletişim</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+          <a class="nav-link nav-link-back" href="trcatalog.html" title="Ana portföy projelerine geri dön">← Portföye Dön</a>
+        </li>
+        <li class="nav-item dropdown ms-lg-3">
+          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dil
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="joecontact.html">English</a></li>
+            <li><a class="dropdown-item active" href="trjoecontact.html">Türkçe</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <h1>İletişim</h1>
+  <div class="contact-intro">
+    Sorularınızı, iş birliği fikirlerinizi ve geri bildirimlerinizi memnuniyetle karşılıyorum.<br>
+    Bir proje konuşmak, mentorluk talep etmek, konuşmacı olarak davet etmek veya sadece merhaba demek için aşağıdaki formu kullanabilirsiniz.<br>
+    <b>Tüm mesajlar şahsen okunur ve yanıtlanır.</b>
+  </div>
+  <div class="contact-card">
+    <form id="contactForm" autocomplete="off" novalidate>
+      <div class="mb-3">
+        <label for="name" class="form-label">Adınız</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Adınız Soyadınız" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-posta Adresiniz</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="ornek@email.com" required>
+      </div>
+      <div class="mb-3">
+        <label for="subject" class="form-label">Konu</label>
+        <select class="form-control" id="subject" name="subject" required>
+          <option value="">Konu seçin</option>
+          <option>Proje Talebi</option>
+          <option>Mentorluk İsteği</option>
+          <option>Konuşmacı Daveti</option>
+          <option>Geri Bildirim</option>
+          <option>Diğer</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Mesajınız</label>
+        <textarea class="form-control" id="message" name="message" rows="6" placeholder="Mesajınızı buraya yazın..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Mesajı Gönder</button>
+      <div id="formResult"></div>
+    </form>
+    <div class="contact-info mt-4">
+      <div><i class="fas fa-envelope"></i> veteran@devmail.com</div>
+      <div><i class="fas fa-phone"></i> +90 (555) 123-4567</div>
+      <div><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</div>
+      <div class="mt-3">
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="ms-3"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" class="ms-3"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <section class="faq-section">
+    <h2>İletişim SSS</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item bg-transparent border-0">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+            Ne kadar sürede yanıt alırım?
+          </button>
+        </h2>
+        <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Tüm mesajlara 48 saat içinde yanıt vermeye çalışıyorum. Acil durumlar için lütfen konuya "ACİL" ekleyin.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-transparent border-0">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+            Görüntülü görüşme ayarlayabilir miyiz?
+          </button>
+        </h2>
+        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Evet, ilk iletişimden sonra Zoom, Teams veya Google Meet üzerinden görüşme ayarlayabiliriz.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-transparent border-0">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+            Ücretsiz (pro bono) danışmanlık veriyor musunuz?
+          </button>
+        </h2>
+        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Zaman zaman sivil toplum kuruluşları ve eğitim girişimleri için ücretsiz danışmanlık yapıyorum. Lütfen projenizi detaylıca açıklayın.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-transparent border-0">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+            Bilgilerim gizli mi tutulacak?
+          </button>
+        </h2>
+        <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Kesinlikle. Tüm iletişimler gizli tutulur ve izniniz olmadan asla paylaşılmaz.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="partners">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="partner-logo" alt="Microsoft">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="partner-logo" alt="Google">
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container text-center">
+    <div class="footer-links mb-3">
+      <a href="trjoeindex.html">Anasayfa</a> |
+      <a href="trjoeabout.html">Hakkında</a> |
+      <a href="trjoeprojects.html">Projeler</a> |
+      <a href="trjoecontact.html">İletişim</a>
+    </div>
+    <p class="mb-2">© <span id="copyright-year"></span> VeteranDev. Tüm hakları saklıdır.</p>
+    <p class="mb-3">
+      <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="ms-3"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" class="ms-3"><i class="fab fa-twitter"></i></a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Telif hakkı yılı
+  document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+  // İletişim formu doğrulama ve sahte gönderim
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const result = document.getElementById('formResult');
+    result.innerHTML = '';
+    if (!name || !email || !subject || !message) {
+      result.innerHTML = '<div class="alert alert-danger">Lütfen tüm alanları doldurun.</div>';
+      return;
+    }
+    if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
+      result.innerHTML = '<div class="alert alert-danger">Lütfen geçerli bir e-posta adresi girin.</div>';
+      return;
+    }
+    result.innerHTML = '<div class="alert alert-success">Mesajınız için teşekkürler! En kısa sürede dönüş yapacağım.</div>';
+    this.reset();
+  });
+</script>
+</body>
+</html>

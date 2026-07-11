@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-adsense-account" content="ca-pub-6088430077678432">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6088430077678432"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Projects | Samet Bozkurt</title>
+    <meta name="description" content="A showcase of web development projects by Samet Bozkurt, highlighting skills in HTML, CSS, JavaScript, Bootstrap, and more." />
+    
+    <link rel="shortcut icon" href="Pictures/favicon.ico" type="image/x-icon">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar-brand {
+            font-weight: bolder;
+        }
+        
+        /* Navigasyon Çubuğundaki Logo İçin Özel Stiller */
+        .navbar-brand img {
+            height: 60px; /* Logonun yüksekliğini buradan ayarlayabilirsiniz */
+            width: auto;  /* Resmin en-boy oranını korur */
+        }
+
+        /* Yüksek logoyu sığdırmak için navigasyon çubuğunun iç boşluklarını ayarla */
+        .navbar.sticky-top {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            transition: padding 0.3s ease;
+        }
+
+        .section-heading {
+            margin-bottom: 4rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #0d6efd;
+            border-radius: 2px;
+        }
+
+        .project-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .project-card .project-image-wrapper {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .project-card .project-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .project-card:hover .project-image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .project-card .project-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .filter-btn-group .btn {
+            border-radius: 50px !important;
+            font-weight: 500;
+        }
+        
+        #projectModal .modal-content {
+            border-radius: 15px;
+        }
+        #projectModal .tech-badge {
+            font-size: 0.9rem;
+        }
+        #projectModal .carousel-item img {
+            max-height: 400px;
+            object-fit: contain;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        .competency-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            height: 100%;
+        }
+        .competency-card .icon {
+            font-size: 3rem;
+            color: #0d6efd;
+            margin-bottom: 1.5rem;
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            z-index: 1030;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .whatsapp-float:hover {
+            background-color: #1ebe57;
+            transform: scale(1.1);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<a href="https://wa.me/905555555555" target="_blank" class="whatsapp-float" aria-label="Contact via WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="Pictures/logo.png" alt="Samet Bozkurt Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="catalog.html">Catalog</a></li>
+                <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Language</a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item active" href="projects.html">English</a></li>
+                        <li><a class="dropdown-item" href="trprojects.html">Türkçe</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="py-5 text-center container" data-aos="fade-up">
+    <div class="row py-lg-5">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h1 class="fw-bold">Bringing Ideas to Life Through Code</h1>
+        <p class="lead text-muted">Welcome to my project showcase. Here you'll find a selection of my work, from university assignments to personal and freelance projects. Each project represents a unique challenge and a learning opportunity. Dive in to see how I approach problem-solving and development.</p>
+      </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="d-flex justify-content-center my-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="btn-group filter-btn-group shadow-sm" role="group" aria-label="Filter projects">
+            <button type="button" class="btn btn-outline-primary active" data-filter="all">All</button>
+            <button type="button" class="btn btn-outline-primary" data-filter="web">Web Dev</button>
+            <button type="button" class="btn btn-outline-primary" data-filter="university">University</button>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="project-grid">
+        
+        <div class="col" data-category="web" data-aos="fade-up">
+            <div class="card project-card">
+                <div class="project-image-wrapper">
+                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Personal Portfolio Screenshot">
+                    <span class="badge rounded-pill text-bg-info project-category">Personal Project</span>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Personal Portfolio Website</h5>
+                    <p class="card-text small text-muted flex-grow-1">The very website you are on. Designed and developed to showcase my skills and projects in a clean, modern way.</p>
+                    <button class="btn btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#projectModal" 
+                            data-title="Personal Portfolio Website"
+                            data-images="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1,https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            data-description="This portfolio is my digital resume and a testament to my front-end development skills. Built from scratch, it features a responsive design, smooth animations, and a multi-language setup to cater to both English and Turkish audiences."
+                            data-features="<li>Fully responsive design for all devices</li><li>Scroll animations with AOS.js</li><li>Interactive project and catalog filters</li><li>JavaScript-powered language switching and modals</li><li>Clean and well-structured HTML/CSS</li>"
+                            data-tech="HTML5,CSS3,JavaScript,Bootstrap 5,AOS.js"
+                            data-live-link="https://sametbozkurt.com.tr"
+                            data-github-link="https://github.com">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" data-category="web" data-aos="fade-up" data-aos-delay="100">
+            <div class="card project-card">
+                <div class="project-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1508928807352-24a4adbb6795?q=80&w=1170&auto=format&fit=crop" alt="Local Grocery Website">
+                    <span class="badge rounded-pill text-bg-primary project-category">Freelance Project</span>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">E-commerce for Local Grocery</h5>
+                    <p class="card-text small text-muted flex-grow-1">A clean and user-friendly e-commerce platform developed for a local business to showcase products and handle online orders.</p>
+                     <button class="btn btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#projectModal" 
+                            data-title="E-commerce for Local Grocery"
+                            data-images="https://images.unsplash.com/photo-1508928807352-24a4adbb6795?q=80&w=1170&auto=format&fit=crop,https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            data-description="This project involved creating a full-featured website for a local grocery store. The primary goal was to create an intuitive shopping experience for customers and an easy-to-manage system for the store owner."
+                            data-features="<li>Responsive product catalog with categories</li><li>Simple and secure checkout process</li><li>Shopping cart functionality with JavaScript</li><li>Contact form and location map</li>"
+                            data-tech="HTML5,CSS3,JavaScript,Bootstrap 5"
+                            data-live-link="#"
+                            data-github-link="https://github.com">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" data-category="web" data-aos="fade-up" data-aos-delay="200">
+            <div class="card project-card">
+                <div class="project-image-wrapper">
+                    <img src="https://images.pexels.com/photos/4057663/pexels-photo-4057663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="News Portal Website">
+                    <span class="badge rounded-pill text-bg-primary project-category">Freelance Project</span>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Modern News Portal</h5>
+                    <p class="card-text small text-muted flex-grow-1">A dynamic and responsive news portal for a local media outlet, designed for readability and easy navigation.</p>
+                    <button class="btn btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#projectModal" 
+                            data-title="Modern News Portal"
+                            data-images="https://images.pexels.com/photos/4057663/pexels-photo-4057663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1,https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            data-description="The challenge was to create a content-heavy site that felt clean and uncluttered. I focused on strong typography, a clear grid system, and a mobile-first approach to ensure a pleasant reading experience on any device."
+                            data-features="<li>Categorized news sections</li><li>Featured articles on the homepage</li><li>Optimized for readability with clean fonts and layouts</li><li>Fully responsive for mobile and tablet users</li>"
+                            data-tech="HTML5,CSS3,Bootstrap 5"
+                            data-live-link="#"
+                            data-github-link="https://github.com">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col" data-category="university" data-aos="fade-up" data-aos-delay="100">
+            <div class="card project-card">
+                <div class="project-image-wrapper">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Algorithm Visualization">
+                    <span class="badge rounded-pill text-bg-success project-category">University Project</span>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Sorting Algorithm Visualizer</h5>
+                    <p class="card-text small text-muted flex-grow-1">An interactive tool to visualize how different sorting algorithms work, developed for a Data Structures course.</p>
+                    <button class="btn btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#projectModal"
+                            data-title="Sorting Algorithm Visualizer"
+                            data-images="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            data-description="This project helped solidify my understanding of core computer science concepts. I used JavaScript and the HTML5 Canvas to create a visual representation of algorithms like Bubble Sort, Merge Sort, and Quick Sort in action."
+                            data-features="<li>Visualization of multiple sorting algorithms</li><li>Controls for array size and visualization speed</li><li>Step-by-step execution to better understand the process</li><li>Built with pure JavaScript, HTML, and CSS</li>"
+                            data-tech="JavaScript,HTML5 Canvas,CSS3"
+                            data-live-link=""
+                            data-github-link="https://github.com">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<section id="competencies" class="py-5 mt-5 bg-white">
+    <div class="container" data-aos="fade-up">
+        <h2 class="text-center section-heading">My Core Competencies</h2>
+        <div class="row g-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="competency-card">
+                    <div class="icon"><i class="fas fa-code"></i></div>
+                    <h4 class="fw-bold">Frontend Development</h4>
+                    <p class="text-muted">I build responsive, high-performance, and user-friendly interfaces using modern web technologies like HTML5, CSS3, JavaScript, and Bootstrap. My focus is on creating seamless experiences across all devices.</p>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="competency-card">
+                    <div class="icon"><i class="fas fa-pencil-ruler"></i></div>
+                    <h4 class="fw-bold">UI/UX Design Principles</h4>
+                    <p class="text-muted">I believe that a great website is not just about code, but also about design. I apply key UI/UX principles to ensure my projects are not only functional but also intuitive, accessible, and visually appealing.</p>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="competency-card">
+                    <div class="icon"><i class="fas fa-database"></i></div>
+                    <h4 class="fw-bold">Web Architecture</h4>
+                    <p class="text-muted">Through my university studies and personal projects, I have developed a solid understanding of web architecture, including client-server models, API integration, and database fundamentals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 text-center">
+    <div class="container" data-aos="fade-up">
+        <div class="p-5 bg-white rounded-3 shadow-sm border">
+            <h2 class="fw-bold">Have a project in mind?</h2>
+            <p class="lead text-muted">If you're looking for a developer to bring your idea to life, I'd love to hear from you. Let's build something amazing together.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg mt-3">Let's Talk</a>
+        </div>
+    </div>
+</section>
+
+
+<footer class="bg-dark text-white text-center py-4 mt-auto">
+  <div class="container">
+    <p class="mb-2">&copy; 2025 Samet Bozkurt. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://instagram.com/" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/" class="text-white me-3"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/" class="text-white"><i class="fab fa-x-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold" id="projectModalLabel">Project Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <div id="projectCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+                            <div class="carousel-inner" id="modal-carousel-inner">
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <h5 class="fw-bold">Project Overview</h5>
+                        <p id="modal-description" class="small text-muted"></p>
+                        
+                        <h5 class="fw-bold mt-4">Key Features</h5>
+                        <ul id="modal-features" class="list-unstyled small text-muted">
+                        </ul>
+
+                        <h5 class="fw-bold mt-4">Technologies Used</h5>
+                        <div id="modal-tech" class="d-flex flex-wrap gap-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-0">
+                <a href="#" id="modal-github-link" target="_blank" class="btn btn-outline-secondary"><i class="fab fa-github me-2"></i>View Code</a>
+                <a href="#" id="modal-live-link" target="_blank" class="btn btn-primary"><i class="fas fa-external-link-alt me-2"></i>Live Demo</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50,
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn-group .btn');
+        const projectItems = document.querySelectorAll('#project-grid .col');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+
+                projectItems.forEach(item => {
+                    const categories = item.getAttribute('data-category').split(' ');
+                    if (filter === 'all' || categories.includes(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        const projectModal = document.getElementById('projectModal');
+        projectModal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            
+            const title = button.getAttribute('data-title');
+            const images = button.getAttribute('data-images').split(',');
+            const description = button.getAttribute('data-description');
+            const features = button.getAttribute('data-features');
+            const tech = button.getAttribute('data-tech').split(',');
+            const liveLink = button.getAttribute('data-live-link');
+            const githubLink = button.getAttribute('data-github-link');
+
+            const modalTitle = projectModal.querySelector('.modal-title');
+            const modalCarouselInner = projectModal.querySelector('#modal-carousel-inner');
+            const modalDescription = projectModal.querySelector('#modal-description');
+            const modalFeatures = projectModal.querySelector('#modal-features');
+            const modalTech = projectModal.querySelector('#modal-tech');
+            const modalLiveLink = projectModal.querySelector('#modal-live-link');
+            const modalGithubLink = projectModal.querySelector('#modal-github-link');
+
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            
+            modalFeatures.innerHTML = features;
+
+            modalCarouselInner.innerHTML = '';
+            images.forEach((imgSrc, index) => {
+                const carouselItem = document.createElement('div');
+                carouselItem.classList.add('carousel-item');
+                if (index === 0) {
+                    carouselItem.classList.add('active');
+                }
+                carouselItem.innerHTML = `<img src="${imgSrc.trim()}" class="d-block w-100" alt="Project image for ${title}">`;
+                modalCarouselInner.appendChild(carouselItem);
+            });
+            
+            modalTech.innerHTML = '';
+            tech.forEach(techName => {
+                const badge = document.createElement('span');
+                badge.classList.add('badge', 'rounded-pill', 'text-bg-light', 'tech-badge');
+                badge.textContent = techName.trim();
+                modalTech.appendChild(badge);
+            });
+            
+            if (liveLink && liveLink !== '#') {
+                modalLiveLink.href = liveLink;
+                modalLiveLink.style.display = 'inline-block';
+            } else {
+                modalLiveLink.style.display = 'none';
+            }
+
+            if (githubLink && githubLink !== '#') {
+                modalGithubLink.href = githubLink;
+                modalGithubLink.style.display = 'inline-block';
+            } else {
+                modalGithubLink.style.display = 'none';
+            }
+        });
+    });
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/68863693f072f7192b20d412/1j16eo1hv';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+
+</html>

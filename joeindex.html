@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-adsense-account" content="ca-pub-6088430077678432">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6088430077678432"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Veteran Software Architect | 50 Years of Engineering Excellence</title>
+    <meta name="description" content="Portfolio of a veteran software architect with five decades of experience in shaping the future of technology, from mainframes to modern cloud-native systems." />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #141414;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a0a0;
+            --accent-primary: #00ddb3;
+            --accent-hover: #00ffc8;
+            --border-color: #262626;
+            --gradient: linear-gradient(90deg, #00ddb3 0%, #00aaff 100%);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .navbar-brand {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+            color: var(--accent-primary);
+        }
+        .hero {
+            padding: 10rem 0 7rem 0;
+            text-align: center;
+            background: radial-gradient(circle, rgba(10,10,10,0.8) 0%, var(--bg-dark) 70%), url('https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            position: relative;
+        }
+        .hero h1 {
+            font-weight: 900;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            letter-spacing: -0.03em;
+        }
+        .hero h1 .highlight {
+            color: var(--accent-primary);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 750px;
+            margin: 1rem auto 2.5rem;
+        }
+        .hero .btn-primary {
+            background: var(--gradient);
+            color: #000;
+            border: none;
+            font-weight: 700;
+            padding: 0.9rem 3rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .hero .btn-primary:hover {
+            background: var(--accent-hover);
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 221, 179, 0.2);
+        }
+        .hero .stats {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        .hero .stat {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem 2.5rem;
+            min-width: 180px;
+            text-align: center;
+        }
+        .hero .stat h3 {
+            color: var(--accent-primary);
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+        .hero .stat p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+        .section-title {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        /* Services */
+        .service-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            height: 100%;
+        }
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .service-card .icon {
+            font-size: 2.5rem;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+        }
+        .service-card h3 {
+            font-weight: 700;
+            font-size: 1.4rem;
+        }
+        .service-card p {
+            color: var(--text-secondary);
+        }
+        /* Featured Projects */
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 221, 179, 0.15);
+        }
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .project-card-body {
+            padding: 1.5rem;
+            flex: 1;
+        }
+        .project-card-title {
+            color: var(--accent-primary);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .project-card-desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .project-card .btn {
+            background: var(--gradient);
+            color: #000;
+            font-weight: 600;
+            border-radius: 6px;
+            padding: 0.5rem 1.5rem;
+        }
+        .project-card .btn:hover {
+            background: var(--accent-hover);
+            color: #000;
+        }
+        /* Testimonials */
+        .testimonial-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-primary);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 221, 179, 0.12);
+        }
+        .testimonial-card .avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 2px solid var(--accent-primary);
+        }
+        .testimonial-card .name {
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+        .testimonial-card .role {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        /* Blog */
+        .blog-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 221, 179, 0.10);
+        }
+        .blog-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .blog-card-body {
+            padding: 1.2rem;
+            flex: 1;
+        }
+        .blog-card-title {
+            color: var(--accent-primary);
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .blog-card-desc {
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+            margin-bottom: 1rem;
+        }
+        /* FAQ */
+        .faq-section {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 4rem;
+            border: 1px solid var(--border-color);
+        }
+        .faq-question {
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+        .faq-answer {
+            color: var(--text-secondary);
+        }
+        /* Partners */
+        .partners {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            margin: 3rem 0;
+        }
+        .partner-logo {
+            height: 48px;
+            filter: grayscale(1) brightness(1.2);
+            opacity: 0.7;
+            transition: filter 0.3s, opacity 0.3s;
+        }
+        .partner-logo:hover {
+            filter: none;
+            opacity: 1;
+        }
+        /* Newsletter */
+        .newsletter-section {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 4rem;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        .newsletter-section input[type="email"] {
+            border-radius: 30px;
+            border: 1px solid #e1e1e1;
+            padding: 10px 18px;
+            font-size: 1rem;
+            outline: none;
+            width: 260px;
+            max-width: 100%;
+            margin-right: 10px;
+        }
+        .newsletter-section button {
+            border-radius: 30px;
+            border: none;
+            background: var(--gradient);
+            color: #000;
+            padding: 10px 24px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .newsletter-section button:hover {
+            background: var(--accent-hover);
+        }
+        /* Footer */
+        footer {
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 1rem;
+            color: var(--text-secondary);
+        }
+        footer a {
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+            font-size: 1.5rem;
+        }
+        footer a:hover {
+            color: var(--accent-primary);
+        }
+        .footer-links a {
+            font-size: 1rem;
+            margin: 0 1rem;
+        }
+        @media (max-width: 991px) {
+            .hero { padding: 6rem 0 3rem 0;}
+            .section-title { font-size: 2rem;}
+        }
+        @media (max-width: 767px) {
+            .hero { padding: 3rem 0 2rem 0;}
+            .hero .stats { flex-direction: column; gap: 1.5rem;}
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="joeindex.html">VeteranDev.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                <li class="nav-item"><a class="nav-link active" href="joeindex.html" aria-current="page">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="joeabout.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="joeprojects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="joecontact.html">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Language</a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item active" href="joeindex.html">English</a></li>
+                        <li><a class="dropdown-item" href="trjoeindex.html">Türkçe</a></li>
+                    </ul>
+                </li>
+                 <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                    <a class="nav-link" href="catalog.html" title="Back to main portfolio projects" style="font-style: italic; color: #ff6b6b;">← Back to Portfolio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+        <h1>Architecting the Future. <span class="highlight">Honed by the Past.</span></h1>
+        <p>A fifty-year journey in software engineering, delivering scalable, secure, and pioneering solutions that have shaped industries and defined technological eras.</p>
+        <a href="joeprojects.html" class="btn btn-primary" role="button">View My Work</a>
+        <div class="stats mt-5">
+            <div class="stat">
+                <h3>50+</h3>
+                <p>Years in Tech</p>
+            </div>
+            <div class="stat">
+                <h3>120+</h3>
+                <p>Major Projects</p>
+            </div>
+            <div class="stat">
+                <h3>30+</h3>
+                <p>Industries Served</p>
+            </div>
+            <div class="stat">
+                <h3>500+</h3>
+                <p>Engineers Mentored</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Services Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">What I Offer</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-chess-king"></i></div>
+                        <h3>Strategic Vision</h3>
+                        <p>Decades of perspective to foresee trends, mitigate risks, and design systems that stand the test of time.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>Technical Depth</h3>
+                        <p>Mastery of a vast spectrum of technologies, from legacy COBOL to modern Rust and cloud-native architectures.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-rocket"></i></div>
+                        <h3>Proven Leadership</h3>
+                        <p>A history of mentoring generations of engineers and leading teams to deliver complex, mission-critical projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Projects -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80" alt="Project 1">
+                        <div class="project-card-body">
+                            <div class="project-card-title">Global Payment Platform</div>
+                            <div class="project-card-desc">Architected a secure, scalable payment system processing millions of transactions daily for a Fortune 100 bank.</div>
+                            <a href="joeprojects.html#project1" class="btn btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80" alt="Project 2">
+                        <div class="project-card-body">
+                            <div class="project-card-title">IoT Healthcare Platform</div>
+                            <div class="project-card-desc">Led the design of a HIPAA-compliant IoT platform connecting medical devices and real-time analytics for hospitals.</div>
+                            <a href="joeprojects.html#project2" class="btn btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80" alt="Project 3">
+                        <div class="project-card-body">
+                            <div class="project-card-title">AI-Driven Logistics</div>
+                            <div class="project-card-desc">Implemented AI/ML models for predictive logistics, reducing costs and improving delivery times for a global retailer.</div>
+                            <a href="joeprojects.html#project3" class="btn btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="avatar" alt="Client 1">
+                        <div class="name">James L.</div>
+                        <div class="role">CTO, FinTech Corp</div>
+                        <p>"A true architect. His vision and technical depth transformed our infrastructure and accelerated our growth."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="avatar" alt="Client 2">
+                        <div class="name">Sophia M.</div>
+                        <div class="role">Lead Engineer, HealthTech</div>
+                        <p>"Mentorship from a legend. I learned more in a year than in my previous decade of work."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/men/65.jpg" class="avatar" alt="Client 3">
+                        <div class="name">Wei Zhang</div>
+                        <div class="role">VP Engineering, Retail Giant</div>
+                        <p>"His AI-driven logistics solution saved us millions and set a new industry standard."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="section-title">Latest Insights</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800&q=80" alt="Blog 1">
+                        <div class="blog-card-body">
+                            <div class="blog-card-title">Legacy to Cloud: A Migration Journey</div>
+                            <div class="blog-card-desc">Lessons learned from migrating mission-critical systems from mainframes to the cloud.</div>
+                            <a href="joeprojects.html#blog1" class="btn btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&q=80" alt="Blog 2">
+                        <div class="blog-card-body">
+                            <div class="blog-card-title">Mentoring the Next Generation</div>
+                            <div class="blog-card-desc">How to cultivate engineering talent and build high-performing teams.</div>
+                            <a href="joeprojects.html#blog2" class="btn btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80" alt="Blog 3">
+                        <div class="blog-card-body">
+                            <div class="blog-card-title">AI in Real-World Logistics</div>
+                            <div class="blog-card-desc">Deploying machine learning at scale to optimize supply chains.</div>
+                            <a href="joeprojects.html#blog3" class="btn btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="faq-section container my-5">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item bg-transparent border-0">
+                <h2 class="accordion-header" id="faq1">
+                    <button class="accordion-button collapsed bg-transparent text-light" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                        <span class="faq-question">What industries have you worked in?</span>
+                    </button>
+                </h2>
+                <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body faq-answer">
+                        Finance, healthcare, retail, logistics, government, telecom, and more.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item bg-transparent border-0">
+                <h2 class="accordion-header" id="faq2">
+                    <button class="accordion-button collapsed bg-transparent text-light" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                        <span class="faq-question">Do you offer consulting or mentoring?</span>
+                    </button>
+                </h2>
+                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body faq-answer">
+                        Yes, I provide both consulting and mentoring for organizations and individuals.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item bg-transparent border-0">
+                <h2 class="accordion-header" id="faq3">
+                    <button class="accordion-button collapsed bg-transparent text-light" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                        <span class="faq-question">Can you help with legacy system modernization?</span>
+                    </button>
+                </h2>
+                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body faq-answer">
+                        Absolutely. I specialize in migrating legacy systems to modern, scalable architectures.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item bg-transparent border-0">
+                <h2 class="accordion-header" id="faq4">
+                    <button class="accordion-button collapsed bg-transparent text-light" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                        <span class="faq-question">Are you available for speaking engagements?</span>
+                    </button>
+                </h2>
+                <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body faq-answer">
+                        Yes, I am available for conferences, webinars, and workshops worldwide.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Partners -->
+   <section class="container">
+    <section class="container">
+    <div class="partners">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="partner-logo" alt="Microsoft">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="partner-logo" alt="Google">
+    </div>
+</section>
+    <!-- Newsletter -->
+    <section class="newsletter-section container">
+        <h2 class="section-title">Stay Updated</h2>
+        <form id="newsletterForm" class="d-flex justify-content-center flex-wrap">
+            <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <div id="newsletterResult" class="mt-2"></div>
+    </section>
+    <!-- Timeline Section -->
+    <section class="container my-5 py-5">
+        <h2 class="section-title">A Career Forged in Code</h2>
+        <div class="timeline">
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <h3>1970s: The Mainframe Era</h3>
+                    <p>Mastered Assembly and COBOL, building foundational systems for finance and logistics on IBM mainframes.</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <h3>1980s: Dawn of the PC & Networks</h3>
+                    <p>Pioneered C and C++ applications, developing early networked systems and contributing to the rise of personal computing.</p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <h3>1990s-2000s: The Web Revolution</h3>
+                    <p>Led development of large-scale e-commerce platforms using Java and early web technologies during the dot-com boom.</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <h3>2010s-Present: Cloud & AI</h3>
+                    <p>Architected scalable, cloud-native solutions on AWS/Azure, integrated AI/ML models, and championed DevOps culture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Have a Complex Challenge?</h2>
+        <p>Let's leverage five decades of experience to build your next breakthrough solution. I specialize in turning ambitious ideas into robust, scalable reality.</p>
+        <a href="joecontact.html" class="btn btn-light">Get In Touch</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-center">
+        <div class="footer-links mb-3">
+            <a href="joeindex.html">Home</a> |
+            <a href="joeabout.html">About</a> |
+            <a href="joeprojects.html">Projects</a> |
+            <a href="joecontact.html">Contact</a>
+        </div>
+        <p class="mb-2">© <span id="copyright-year"></span> VeteranDev. All rights reserved.</p>
+        <p class="mb-3">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="ms-3"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" class="ms-3"><i class="fab fa-twitter"></i></a>
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Dynamic copyright
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    // Newsletter
+    document.getElementById('newsletterForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        const email = document.getElementById('newsletterEmail').value.trim();
+        const result = document.getElementById('newsletterResult');
+        if(!email.match(/^[^@]+@[^@]+\.[^@]+$/)){
+            result.innerHTML = '<span class="text-danger">Please enter a valid email address.</span>';
+            return;
+        }
+        result.innerHTML = '<span class="text-success">Thank you for subscribing!</span>';
+        this.reset();
+    });
+</script>
+</body>
+</html>

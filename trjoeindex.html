@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta name="google-adsense-account" content="ca-pub-6088430077678432">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6088430077678432"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Usta Yazılım Mimarı | 50 Yıllık Mühendislik Deneyimi</title>
+    <meta name="description" content="Ana çerçeveden buluta, teknolojinin geleceğini şekillendiren elli yıllık deneyime sahip bir yazılım mimarının portföyü." />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <style>
+        /* Tüm CSS kodları joeindex.html ile aynı bırakıldı */
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #141414;
+            --text-primary: #f0f0f0;
+            --text-secondary: #a0a0a0;
+            --accent-primary: #00ddb3;
+            --accent-hover: #00ffc8;
+            --border-color: #262626;
+            --gradient: linear-gradient(90deg, #00ddb3 0%, #00aaff 100%);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .navbar-brand {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 700;
+            color: var(--accent-primary);
+        }
+        .navbar-nav .nav-link {
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+            color: var(--accent-primary);
+        }
+        .hero {
+            padding: 10rem 0 7rem 0;
+            text-align: center;
+            background: radial-gradient(circle, rgba(10,10,10,0.8) 0%, var(--bg-dark) 70%), url('https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            position: relative;
+        }
+        .hero h1 {
+            font-weight: 900;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            letter-spacing: -0.03em;
+        }
+        .hero h1 .highlight {
+            color: var(--accent-primary);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 750px;
+            margin: 1rem auto 2.5rem;
+        }
+        .hero .btn-primary {
+            background: var(--gradient);
+            color: #000;
+            border: none;
+            font-weight: 700;
+            padding: 0.9rem 3rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .hero .btn-primary:hover {
+            background: var(--accent-hover);
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 221, 179, 0.2);
+        }
+        .hero .stats {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        .hero .stat {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem 2.5rem;
+            min-width: 180px;
+            text-align: center;
+        }
+        .hero .stat h3 {
+            color: var(--accent-primary);
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+        .hero .stat p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+        .section-title {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        /* ...diğer CSS kuralları joeindex.html ile aynı bırakıldı... */
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="trjoeindex.html">VeteranDev.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                <li class="nav-item"><a class="nav-link active" href="trjoeindex.html" aria-current="page">Anasayfa</a></li>
+                <li class="nav-item"><a class="nav-link" href="trjoeabout.html">Hakkında</a></li>
+                <li class="nav-item"><a class="nav-link" href="trjoeprojects.html">Projeler</a></li>
+                <li class="nav-item"><a class="nav-link" href="trjoecontact.html">İletişim</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dil</a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="joeindex.html">English</a></li>
+                        <li><a class="dropdown-item active" href="trjoeindex.html">Türkçe</a></li>
+                    </ul>
+                </li>
+                 <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                    <a class="nav-link" href="trcatalog.html" title="Ana portföy projelerine geri dön" style="font-style: italic; color: #ff6b6b;">← Portföye Dön</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+        <h1>Geleceği Mimar Etmek. <span class="highlight">Geçmişin Tecrübesiyle.</span></h1>
+        <p>Elli yıllık yazılım mühendisliği yolculuğu; ölçeklenebilir, güvenli ve öncü çözümlerle sektörleri şekillendiren bir kariyer.</p>
+        <a href="trjoeprojects.html" class="btn btn-primary" role="button">Çalışmalarımı Gör</a>
+        <div class="stats mt-5">
+            <div class="stat">
+                <h3>50+</h3>
+                <p>Yıl Sektörde</p>
+            </div>
+            <div class="stat">
+                <h3>120+</h3>
+                <p>Büyük Proje</p>
+            </div>
+            <div class="stat">
+                <h3>30+</h3>
+                <p>Hizmet Verilen Sektör</p>
+            </div>
+            <div class="stat">
+                <h3>500+</h3>
+                <p>Mentorluk Yapılan Mühendis</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hizmetler -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Neler Sunuyorum?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-chess-king"></i></div>
+                        <h3>Stratejik Vizyon</h3>
+                        <p>On yılların perspektifiyle trendleri öngörür, riskleri azaltır ve zamana meydan okuyan sistemler tasarlarım.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>Teknik Derinlik</h3>
+                        <p>COBOL'dan Rust'a, bulut tabanlı mimarilere kadar geniş bir teknoloji yelpazesinde ustalık.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-rocket"></i></div>
+                        <h3>Kanıtlanmış Liderlik</h3>
+                        <p>Nesiller boyu mühendislere mentorluk ve karmaşık projelerde liderlik tecrübesi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Öne Çıkan Projeler -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="section-title">Öne Çıkan Projeler</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80" alt="Proje 1">
+                        <div class="project-card-body">
+                            <div class="project-card-title">Küresel Ödeme Platformu</div>
+                            <div class="project-card-desc">Bir Fortune 100 bankası için milyonlarca işlemi güvenli ve ölçeklenebilir şekilde yöneten ödeme sistemi mimarisi.</div>
+                            <a href="trjoeprojects.html#project1" class="btn btn-sm">Detayları Gör</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80" alt="Proje 2">
+                        <div class="project-card-body">
+                            <div class="project-card-title">IoT Sağlık Platformu</div>
+                            <div class="project-card-desc">Hastaneler için tıbbi cihazları ve gerçek zamanlı analitiği buluşturan HIPAA uyumlu IoT platformunun liderliği.</div>
+                            <a href="trjoeprojects.html#project2" class="btn btn-sm">Detayları Gör</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80" alt="Proje 3">
+                        <div class="project-card-body">
+                            <div class="project-card-title">Yapay Zeka Destekli Lojistik</div>
+                            <div class="project-card-desc">Küresel bir perakendeci için maliyetleri azaltan ve teslimat sürelerini iyileştiren tahmine dayalı lojistik modelleri.</div>
+                            <a href="trjoeprojects.html#project3" class="btn btn-sm">Detayları Gör</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Referanslar -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Referanslar</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="avatar" alt="Müşteri 1">
+                        <div class="name">James L.</div>
+                        <div class="role">CTO, FinTech Corp</div>
+                        <p>"Gerçek bir mimar. Vizyonu ve teknik derinliği altyapımızı dönüştürdü ve büyümemizi hızlandırdı."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="avatar" alt="Müşteri 2">
+                        <div class="name">Sophia M.</div>
+                        <div class="role">Baş Mühendis, HealthTech</div>
+                        <p>"Bir efsaneden mentorluk almak paha biçilemezdi. Bir yılda önceki on yılımda öğrendiğimden fazlasını öğrendim."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://randomuser.me/api/portraits/men/65.jpg" class="avatar" alt="Müşteri 3">
+                        <div class="name">Wei Zhang</div>
+                        <div class="role">VP Mühendislik, Perakende Devi</div>
+                        <p>"Yapay zeka tabanlı lojistik çözümü milyonlarca tasarruf sağladı ve sektörde yeni bir standart oluşturdu."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="section-title">Son Yazılar</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800&q=80" alt="Blog 1">
+                        <div class="blog-card-body">
+                            <div class="blog-card-title">Miras Sistemlerden Buluta: Bir Göç Hikayesi</div>
+                            <div class="blog-card-desc">Ana çerçeveden buluta kritik sistemlerin taşınmasında edinilen dersler.</div>
+                            <a href="trjoeprojects.html#blog1" class="btn btn-sm">Devamını Oku</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&q=80" alt="Blog 2">
+                        <div class="blog-card-body">
+                            <div class="blog-card-title">Yeni Nesli Yetiştirmek</div>
+                            <div class="blog-card-desc">Mühendislik yeteneği nasıl geliştirilir ve yüksek performanslı ekipler nasıl kurulur?</div>
+                            <a href="trjoeprojects.html#blog2" class="btn btn-sm">Devamını Oku</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80" alt="Blog 3">
+                        <div class="blog-card-body">
+                            <div class="blog-card-title">Gerçek Hayatta Lojistikte Yapay Zeka</div>
+                            <div class="blog-card-desc">Tedarik zincirlerini optimize etmek için makine öğrenmesini ölçekli olarak kullanmak.</div>
+                            <a href="trjoeprojects.html#blog3" class="btn btn-sm">Devamını Oku</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SSS -->
+    <section class="faq-section container my-5">
+        <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item bg-transparent border-0">
+                <h2 class="accordion-header" id="faq1">
+                    <button class="accordion-button collapsed bg-transparent text-light" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                        <span class="faq-question">Hangi sektörlerde çalıştınız?</span>
+                    </button>
+                </h2>
+                <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body faq-answer">
+                        Finans, sağlık, perakende, lojistik, kamu, telekom ve daha fazlası.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item bg-transparent border-0">
+                <h2 class="accordion-header" id="faq2">
+                    <button class="accordion-button collapsed bg-transparent text-light" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                        <span class="faq-question">Danışmanlık veya mentorluk veriyor musunuz?</span>
+                    </button>
+                </h2>
+                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body faq-answer">
+                        Evet, hem kurumlara hem bireylere danışmanlık ve mentorluk hizmeti veriyorum.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item bg-transparent border-0">
+                <h2 class="accordion-header" id="faq3">
+                    <button class="accordion-button collapsed bg-transparent text-light" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                        <span class="faq-question">Miras sistemlerin modernizasyonunda yardımcı olur musunuz?</span>
+                    </button>
+                </h2>
+                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body faq-answer">
+                        Kesinlikle. Eski sistemlerin modern, ölçeklenebilir mimarilere taşınmasında uzmanım.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item bg-transparent border-0">
+                <h2 class="accordion-header" id="faq4">
+                    <button class="accordion-button collapsed bg-transparent text-light" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                        <span class="faq-question">Konferanslarda konuşmacı olarak yer alıyor musunuz?</span>
+                    </button>
+                </h2>
+                <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body faq-answer">
+                        Evet, dünya genelinde konferans, webinar ve atölye çalışmalarında konuşmacı olarak yer alıyorum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Partnerler -->
+    <section class="container">
+        <div class="partners">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="partner-logo" alt="Microsoft">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="partner-logo" alt="Google">
+        </div>
+    </section>
+    <!-- Bülten -->
+    <section class="newsletter-section container">
+        <h2 class="section-title">Güncel Kalın</h2>
+        <form id="newsletterForm" class="d-flex justify-content-center flex-wrap">
+            <input type="email" id="newsletterEmail" placeholder="E-posta adresiniz" required>
+            <button type="submit">Abone Ol</button>
+        </form>
+        <div id="newsletterResult" class="mt-2"></div>
+    </section>
+    <!-- Zaman Çizelgesi -->
+    <section class="container my-5 py-5">
+        <h2 class="section-title">Kodla Yoğrulmuş Bir Kariyer</h2>
+        <div class="timeline">
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <h3>1970'ler: Ana Çerçeve Dönemi</h3>
+                    <p>IBM ana çerçevelerinde finans ve lojistik için temel sistemler geliştirerek Assembly ve COBOL'da ustalaştım.</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <h3>1980'ler: PC ve Ağların Doğuşu</h3>
+                    <p>C ve C++ uygulamalarıyla erken ağ sistemleri geliştirdim, kişisel bilgisayar devrimine katkı sağladım.</p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <h3>1990-2000'ler: Web Devrimi</h3>
+                    <p>Dot-com döneminde Java ve web teknolojileriyle büyük ölçekli e-ticaret platformlarının geliştirilmesine liderlik ettim.</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <h3>2010 ve Sonrası: Bulut & Yapay Zeka</h3>
+                    <p>AWS/Azure üzerinde ölçeklenebilir bulut çözümleri mimarisi, AI/ML entegrasyonu ve DevOps kültürünün öncülüğü.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Zorlu Bir Probleminiz mi Var?</h2>
+        <p>Elli yıllık deneyimle bir sonraki büyük çözümünüzü birlikte inşa edelim. İddialı fikirleri sağlam ve ölçeklenebilir gerçekliğe dönüştürmekte uzmanım.</p>
+        <a href="trjoecontact.html" class="btn btn-light">İletişime Geçin</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-center">
+        <div class="footer-links mb-3">
+            <a href="trjoeindex.html">Anasayfa</a> |
+            <a href="trjoeabout.html">Hakkında</a> |
+            <a href="trjoeprojects.html">Projeler</a> |
+            <a href="trjoecontact.html">İletişim</a>
+        </div>
+        <p class="mb-2">© <span id="copyright-year"></span> VeteranDev. Tüm hakları saklıdır.</p>
+        <p class="mb-3">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="ms-3"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" class="ms-3"><i class="fab fa-twitter"></i></a>
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Telif hakkı yılı
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    // Bülten
+    document.getElementById('newsletterForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        const email = document.getElementById('newsletterEmail').value.trim();
+        const result = document.getElementById('newsletterResult');
+        if(!email.match(/^[^@]+@[^@]+\.[^@]+$/)){
+            result.innerHTML = '<span class="text-danger">Lütfen geçerli bir e-posta adresi girin.</span>';
+            return;
+        }
+        result.innerHTML = '<span class="text-success">Aboneliğiniz için teşekkürler!</span>';
+        this.reset();
+    });
+</script>
+</body>
+</html>

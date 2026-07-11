@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-adsense-account" content="ca-pub-6088430077678432">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6088430077678432"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Website Template Catalog | Samet Bozkurt</title>
+    <meta name="description" content="Explore a catalog of ready-to-launch, professionally designed website templates for businesses, portfolios, and more. Customizable and responsive solutions." />
+    
+    <link rel="shortcut icon" href="Pictures/favicon.ico" type="image/x-icon" />
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    
+    <style>
+        :root {
+            --bs-primary-rgb: 13, 110, 253;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+        }
+
+        .navbar-brand {
+            font-weight: bolder;
+        }
+        
+        /* Navigasyon Çubuğundaki Logo İçin Özel Stiller */
+        .navbar-brand img {
+            height: 60px; /* Logonun yüksekliğini buradan ayarlayabilirsiniz */
+            width: auto;  /* Resmin en-boy oranını korur */
+        }
+
+        /* Yüksek logoyu sığdırmak için navigasyon çubuğunun iç boşluklarını ayarla */
+        .navbar.sticky-top {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            transition: padding 0.3s ease; /* Yumuşak geçiş için */
+        }
+
+        .section-heading {
+            margin-bottom: 3rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 1rem;
+            font-size: clamp(1.6rem, 7vw, 2.25rem); 
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: rgb(var(--bs-primary-rgb));
+            border-radius: 2px;
+        }
+        
+        .catalog-card {
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .catalog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .catalog-card .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        
+        .catalog-card .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+        
+        .catalog-card .card-text {
+            flex-grow: 1;
+        }
+
+        .tech-badge {
+            font-size: 0.75rem;
+            padding: 0.35em 0.6em;
+        }
+        
+        .feature-card {
+            background: #fff;
+            padding: 1.25rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease-in-out;
+            height: 100%;
+            text-align: center;
+        }
+
+        .feature-card .icon {
+            font-size: 2.5rem;
+            color: rgb(var(--bs-primary-rgb));
+            margin-bottom: 1rem;
+        }
+
+        .process-timeline {
+            padding-left: 0;
+        }
+        .process-timeline::before,
+        .process-step::before {
+            display: none;
+        }
+        .process-step {
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border-left: 5px solid rgb(var(--bs-primary-rgb));
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+        }
+
+        .faq-accordion .accordion-button {
+            font-size: 1rem;
+        }
+        .faq-accordion .accordion-button:not(.collapsed) {
+            background-color: #eef5ff;
+            color: rgb(var(--bs-primary-rgb));
+            font-weight: 600;
+        }
+
+        .quick-link-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #212529;
+            display: block;
+            height: 100%;
+        }
+        .quick-link-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            color: rgb(var(--bs-primary-rgb));
+        }
+        .quick-link-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: rgb(var(--bs-primary-rgb));
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 15px;
+            left: 15px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            z-index: 1030;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #1ebe57;
+            transform: scale(1.1);
+        }
+
+        #projectCarousel .carousel-item img {
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        @media (min-width: 768px) {
+            .section-heading::after {
+                width: 80px;
+                height: 4px;
+            }
+
+            .catalog-card .card-body {
+                padding: 1.5rem;
+            }
+
+            .feature-card {
+                text-align: left;
+            }
+
+            .feature-card .icon {
+                margin-right: 1.5rem;
+                margin-bottom: 0;
+            }
+
+            .quick-link-card {
+                padding: 2rem;
+            }
+
+            .process-timeline {
+                position: relative;
+                padding-left: 50px;
+            }
+            .process-timeline::before {
+                display: block;
+                content: '';
+                position: absolute;
+                left: 19px;
+                top: 5px;
+                bottom: 5px;
+                width: 4px;
+                background-color: #e9ecef;
+                border-radius: 2px;
+            }
+            .process-step::before {
+                display: block;
+                content: '';
+                position: absolute;
+                left: -40px;
+                top: 5px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: rgb(var(--bs-primary-rgb));
+                border: 3px solid #fff;
+                box-shadow: 0 0 0 4px rgb(var(--bs-primary-rgb));
+            }
+
+            #projectCarousel .carousel-item img {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="Pictures/logo.png" alt="Samet Bozkurt Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="catalog.html">Catalog</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Language</a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item active" href="catalog.html">English</a></li>
+                        <li><a class="dropdown-item" href="trcatalog.html">Türkçe</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="py-5 text-center container" data-aos="fade-up">
+    <div class="row py-lg-5">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h1 class="fw-bold" style="font-size: clamp(2.2rem, 8vw, 3rem);">Ready-to-Launch Website Solutions</h1>
+        <p class="lead text-muted">Explore my collection of professionally designed templates. Each one is responsive, easy to customize, and built with modern technology.</p>
+      </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 g-lg-4 mt-4" id="catalog-grid">
+        <div class="col" data-category="portfolio" data-aos="fade-up">
+            <div class="card catalog-card">
+                <img src="https://images.pexels.com/photos/7735630/pexels-photo-7735630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Personal Portfolio Template">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Creative Portfolio</h5>
+                    <p class="card-text small text-muted">A stylish, dark-themed portfolio for developers and creatives. Features a slick project gallery and contact form.</p>
+                    <div class="mb-3">
+                        <span class="badge text-bg-primary tech-badge">HTML5</span>
+                        <span class="badge text-bg-secondary tech-badge">CSS3</span>
+                        <span class="badge text-bg-warning tech-badge">JavaScript</span>
+                    </div>
+                    <div class="mt-auto d-grid gap-2 d-sm-flex">
+                        <a href="joeindex.html" class="btn btn-primary btn-sm">Live Preview</a>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#projectDetailModal"
+                            data-title="Creative Portfolio Details"
+                            data-description="This template is designed for professionals who want to showcase their work in a visually compelling way. The dark theme reduces eye strain and makes visual content pop. It includes a dynamic project gallery, a working contact form, and smooth animations to enhance user experience. The code is well-commented, making it easy to add your own projects and information."
+                            data-img1="https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            data-img2="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            data-img3="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" data-category="ecommerce" data-aos="fade-up" data-aos-delay="100">
+            <div class="card catalog-card">
+                <img src="https://images.unsplash.com/photo-1508928807352-24a4adbb6795?q=80&w=1170&auto=format&fit=crop" class="card-img-top" alt="Local Grocery Template">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Local Grocery</h5>
+                    <p class="card-text small text-muted">An e-commerce template for local shops. Includes product catalog, shopping cart, and easy management.</p>
+                    <div class="mb-3">
+                        <span class="badge text-bg-primary tech-badge">HTML5</span>
+                        <span class="badge text-bg-success tech-badge">Bootstrap 5</span>
+                        <span class="badge text-bg-warning tech-badge">JavaScript</span>
+                    </div>
+                     <div class="mt-auto d-grid gap-2 d-sm-flex">
+                        <a href="khanindex.html" class="btn btn-primary btn-sm">Live Preview</a>
+                        <button type="button" class="btn btn-outline-secondary btn-sm"
+                            data-bs-toggle="modal" 
+                            data-bs-target="#projectDetailModal"
+                            data-title="Local Grocery Details"
+                            data-description="A perfect starting point for small businesses, farms, or local stores wanting to sell their products online. This template features a clean product grid, a detailed product page, a functional shopping cart, and a simple checkout process. Built with Bootstrap 5, it is fully responsive and looks fantastic on any device, ensuring a smooth shopping experience for customers."
+                            data-img1="https://images.unsplash.com/photo-1548104144-32c5171cf929?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            data-img2="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1374&auto=format&fit=crop"
+                            data-img3="https://images.unsplash.com/photo-1601599561213-832382fd07ba?q=80&w=1287&auto=format&fit=crop">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" data-category="business" data-aos="fade-up" data-aos-delay="200">
+            <div class="card catalog-card">
+                <img src="https://images.pexels.com/photos/4057663/pexels-photo-4057663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="News Portal Template">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">News Portal</h5>
+                    <p class="card-text small text-muted">A clean and modern news portal layout, perfect for local news agencies, bloggers, or online magazines.</p>
+                    <div class="mb-3">
+                        <span class="badge text-bg-primary tech-badge">HTML5</span>
+                        <span class="badge text-bg-success tech-badge">Bootstrap 5</span>
+                    </div>
+                     <div class="mt-auto d-grid gap-2 d-sm-flex">
+                        <a href="newsindex.html" class="btn btn-primary btn-sm">Live Preview</a>
+                        <button type="button" class="btn btn-outline-secondary btn-sm"
+                            data-bs-toggle="modal" 
+                            data-bs-target="#projectDetailModal"
+                            data-title="News Portal Details"
+                            data-description="This template offers a professional and organized layout for content-heavy websites. It includes sections for featured stories, different news categories, and a prominent 'latest news' ticker. The design prioritizes readability and easy navigation, allowing readers to find the content they are interested in quickly. It's an ideal solution for digital magazines, community news sites, and professional blogs."
+                            data-img1="https://images.pexels.com/photos/2872767/pexels-photo-2872767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            data-img2="https://images.pexels.com/photos/7551675/pexels-photo-7551675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            data-img3="https://images.pexels.com/photos/159045/the-interior-of-the-library-book-books-159045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<section id="common-features" class="py-5 mt-5 bg-white">
+    <div class="container" data-aos="fade-up">
+        <h2 class="text-center section-heading">Standard Features</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1">100% Responsive</h5>
+                        <p class="text-muted mb-0 small">Looks great on all devices, from desktops to mobile phones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-search"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1">SEO Friendly</h5>
+                        <p class="text-muted mb-0 small">Built with best practices for search engine optimization.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-edit"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1">Easy to Customize</h5>
+                        <p class="text-muted mb-0 small">Clean code and clear structure make customization simple.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="feature-card">
+                    <div class="icon"><i class="fab fa-bootstrap"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1">Modern Tech</h5>
+                        <p class="text-muted mb-0 small">Built with the latest versions of HTML5, CSS3, and Bootstrap.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-globe"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1">Cross-Browser</h5>
+                        <p class="text-muted mb-0 small">Works seamlessly on Chrome, Firefox, Safari, and Edge.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-headset"></i></div>
+                    <div>
+                        <h5 class="fw-bold mb-1">Dedicated Support</h5>
+                        <p class="text-muted mb-0 small">Get help and support for any questions you might have.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="customization-process" class="py-5">
+    <div class="container" data-aos="fade-up">
+        <h2 class="text-center section-heading">Our Customization Process</h2>
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1170&auto=format&fit=crop" class="img-fluid rounded-3 shadow-lg" alt="Team working on a project"/>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="process-timeline mt-4 mt-lg-0">
+                    <div class="process-step">
+                        <h5 class="fw-bold">Step 1: Consultation</h5>
+                        <p class="text-muted">We start with a conversation to understand your goals, brand, and target audience for the website.</p>
+                    </div>
+                    <div class="process-step">
+                        <h5 class="fw-bold">Step 2: Customization</h5>
+                        <p class="text-muted">You provide your content (text, images, logo), and I'll expertly integrate it into the chosen template, matching your brand's colors and style.</p>
+                    </div>
+                    <div class="process-step">
+                        <h5 class="fw-bold">Step 3: Review & Refine</h5>
+                        <p class="text-muted">I'll present you with a private link to review the website. We'll collaborate to make any necessary adjustments.</p>
+                    </div>
+                    <div class="process-step mb-0">
+                        <h5 class="fw-bold">Step 4: Launch & Support</h5>
+                        <p class="text-muted">Once you're completely satisfied, I'll help you launch the site on your domain and provide support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="bg-white py-5">
+    <div class="container" data-aos="fade-up">
+        <h2 class="text-center section-heading">What My Clients Say</h2>
+        <div class="row gy-4">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-card h-100">
+                    <p class="fst-italic">"Working with Samet was a breeze. He took the 'Creative Portfolio' template and perfectly adapted it to my brand. The final result exceeded my expectations. Highly recommended!"</p>
+                    <div class="mt-auto pt-3">
+                        <h6 class="fw-bold mb-0">Ayşe Yılmaz</h6>
+                        <small class="text-muted">Freelance Designer</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-card h-100">
+                    <p class="fst-italic">"The 'Local Grocery' template was exactly what our family business needed to get online quickly. Samet was professional, fast, and very helpful throughout the entire process."</p>
+                    <div class="mt-auto pt-3">
+                        <h6 class="fw-bold mb-0">Mehmet Kaya</h6>
+                        <small class="text-muted">Owner, Kaya Gıda</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="py-5">
+    <div class="container" data-aos="fade-up">
+        <h2 class="text-center section-heading">Frequently Asked Questions</h2>
+        <div class="accordion faq-accordion col-lg-8 mx-auto" id="faqAccordion">
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What's included with a template?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        You receive all the source code files (HTML, CSS, JavaScript). I also offer a basic customization package which includes adding your content (text, images), changing the color scheme, and deploying the website to your hosting provider.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Can you add features that are not in the template?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Absolutely! If you need additional features like a blog, more complex forms, or integration with third-party services, we can discuss your requirements and I can provide a quote for the custom development work.
+                    </div>
+                </div>
+            </div>
+             <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Do I need technical knowledge?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        For these static templates, content updates require basic HTML knowledge. If you prefer an easy-to-use admin panel, I can integrate the template with a Content Management System (CMS) for an additional fee.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="quick-links" class="py-5 bg-white">
+    <div class="container" data-aos="fade-up">
+        <h2 class="text-center section-heading">What's Next?</h2>
+        <div class="row g-4">
+            <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+                <a href="projects.html" class="quick-link-card">
+                    <div class="icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h4 class="fw-bold">View Custom Projects</h4>
+                    <p class="text-muted">See the bespoke solutions I've built from the ground up for other clients.</p>
+                </a>
+            </div>
+            <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
+                <a href="about.html" class="quick-link-card">
+                    <div class="icon"><i class="fas fa-user-circle"></i></div>
+                    <h4 class="fw-bold">Learn More About Me</h4>
+                    <p class="text-muted">Discover my story, my development philosophy, and the skills I bring to the table.</p>
+                </a>
+            </div>
+            <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="300">
+                <a href="contact.html" class="quick-link-card">
+                    <div class="icon"><i class="fas fa-comments"></i></div>
+                    <h4 class="fw-bold">Request a Consultation</h4>
+                    <p class="text-muted">Have a unique idea? Let's talk about it. I offer free consultations for custom projects.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p class="mb-2">&copy; 2025 Samet Bozkurt. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://instagram.com/" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/" class="text-white me-3"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/" class="text-white"><i class="fab fa-x-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+<div class="modal fade" id="projectDetailModal" tabindex="-1" aria-labelledby="projectDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fs-6" id="projectDetailModalLabel">Project Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="projectCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="" class="d-block w-100 carousel-project-img" alt="Project image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="" class="d-block w-100 carousel-project-img" alt="Project image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="" class="d-block w-100 carousel-project-img" alt="Project image 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <p id="modalProjectDescription" class="small"></p>
+        <h6 class="fw-bold mt-4">Technologies Used:</h6>
+        <div id="modalProjectTech">
+            <span class="badge text-bg-primary tech-badge">HTML5</span>
+            <span class="badge text-bg-secondary tech-badge">CSS3</span>
+            <span class="badge text-bg-success tech-badge">Bootstrap 5</span>
+            <span class="badge text-bg-warning tech-badge">JavaScript</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="https://wa.me/905555555555" target="_blank" class="whatsapp-float" aria-label="Contact via WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50,
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const detailModal = document.getElementById('projectDetailModal');
+        if (detailModal) {
+            detailModal.addEventListener('show.bs.modal', event => {
+                const button = event.relatedTarget;
+                const title = button.getAttribute('data-title');
+                const description = button.getAttribute('data-description');
+                const img1 = button.getAttribute('data-img1');
+                const img2 = button.getAttribute('data-img2');
+                const img3 = button.getAttribute('data-img3');
+
+                const modalTitle = detailModal.querySelector('.modal-title');
+                const modalDescription = detailModal.querySelector('#modalProjectDescription');
+                const carouselImages = detailModal.querySelectorAll('.carousel-project-img');
+                
+                modalTitle.textContent = title;
+                modalDescription.textContent = description;
+                carouselImages[0].src = img1;
+                carouselImages[1].src = img2;
+                carouselImages[2].src = img3;
+
+                const carouselElement = detailModal.querySelector('#projectCarousel');
+                if (carouselElement) {
+                    const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement);
+                    carousel.to(0);
+                }
+            });
+        }
+    });
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/68863693f072f7192b20d412/1j16eo1hv';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+
+</html> 

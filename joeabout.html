@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-adsense-account" content="ca-pub-6088430077678432">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6088430077678432"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - Veteran Software Architect</title>
+  <meta name="description" content="About a veteran software architect with 50 years of expertise in building the future of technology." />
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #0a0a0a;
+      --bg-card: #141414;
+      --text-primary: #f0f0f0;
+      --text-secondary: #a0a0a0;
+      --accent-primary: #00ddb3;
+      --accent-hover: #00ffc8;
+      --border-color: #262626;
+      --gradient: linear-gradient(90deg, #00ddb3 0%, #00aaff 100%);
+      --shadow: 0 8px 32px rgba(0,221,179,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .navbar {
+      background-color: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      animation: fadeInDown 1s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .navbar-brand {
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 700;
+      color: var(--accent-primary);
+      letter-spacing: 1px;
+      font-size: 2rem;
+      transition: color .3s;
+    }
+    .navbar-brand:hover { color: var(--accent-hover);}
+    .navbar-nav .nav-link {
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+      color: var(--accent-primary);
+    }
+    .section-title {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      color: var(--accent-primary);
+      letter-spacing: 0.01em;
+      animation: fadeInUp 1.2s;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .about-hero {
+      padding: 7rem 0 4rem 0;
+      text-align: center;
+      background: radial-gradient(circle, rgba(10,10,10,0.8) 0%, var(--bg-dark) 70%), url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80') center/cover no-repeat;
+      position: relative;
+      animation: heroFadeIn 1.5s cubic-bezier(.4,0,.2,1);
+    }
+    @keyframes heroFadeIn {
+      from { opacity: 0; transform: scale(1.05);}
+      to { opacity: 1; transform: scale(1);}
+    }
+    .about-hero h1 {
+      font-weight: 900;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      letter-spacing: -0.03em;
+      color: var(--accent-primary);
+      text-shadow: 0 4px 24px rgba(0,221,179,0.08);
+      animation: fadeInUp 1.2s;
+    }
+    .about-hero p {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 1.5rem auto 2.5rem;
+      animation: fadeInUp 1.5s;
+    }
+    .about-hero .btn-primary {
+      background: var(--gradient);
+      color: #000;
+      border: none;
+      font-weight: 700;
+      padding: 0.9rem 3rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 12px rgba(0,221,179,0.13);
+      animation: fadeInUp 1.7s;
+    }
+    .about-hero .btn-primary:hover {
+      background: var(--accent-hover);
+      color: #000;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 221, 179, 0.2);
+    }
+    .about-summary, .skills-section, .leadership-section, .philosophy-section, .publications-section, .java-demo-section, .awards-section, .hobbies-section, .volunteer-section, .testimonials-section, .faq-section {
+      background: var(--bg-card);
+      border-radius: 18px;
+      border: 1px solid var(--border-color);
+      padding: 2.5rem 2rem;
+      margin-bottom: 3rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeInUp 1.2s;
+    }
+    .about-summary h2, .skills-section h2, .leadership-section h2, .philosophy-section h2, .publications-section h2, .java-demo-section h2, .awards-section h2, .hobbies-section h2, .volunteer-section h2, .testimonials-section h2, .faq-section h2 {
+      color: var(--accent-primary);
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+    }
+    .about-summary p, .skills-section p, .leadership-section ul, .philosophy-section p, .publications-list, .awards-section ul, .hobbies-section ul, .volunteer-section ul, .testimonials-section .testimonial, .faq-section .accordion-body {
+      color: var(--text-secondary);
+      font-size: 1.13rem;
+      margin-bottom: 1.2rem;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .skill-card {
+      background: #181f23;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      min-width: 180px;
+      flex: 1 1 220px;
+      text-align: center;
+      color: var(--accent-primary);
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 10px rgba(0,221,179,0.04);
+      transition: transform 0.2s, background 0.2s, color 0.2s;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    .skill-card.visible { opacity: 1; transform: translateY(0);}
+    .skill-card:hover {
+      transform: scale(1.08);
+      background: #1e2a32;
+      color: var(--accent-hover);
+      box-shadow: 0 8px 24px rgba(0,221,179,0.13);
+    }
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 2rem 0;
+      max-width: 900px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent-primary);
+      opacity: 0.2;
+      transform: translateX(-50%);
+    }
+    .timeline-event {
+      position: relative;
+      width: 50%;
+      padding: 2rem 2.5rem;
+      box-sizing: border-box;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.7s cubic-bezier(.4,0,.2,1);
+    }
+    .timeline-event.visible { opacity: 1; transform: translateY(0);}
+    .timeline-event.left { left: 0; text-align: right;}
+    .timeline-event.right { left: 50%; text-align: left;}
+    .timeline-event-content {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 4px 24px rgba(0,221,179,0.07);
+      min-height: 120px;
+    }
+    .timeline-event.left .timeline-event-content { margin-right: 2rem;}
+    .timeline-event.right .timeline-event-content { margin-left: 2rem;}
+    .timeline-event h3 {
+      color: var(--accent-primary);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+    }
+    .timeline-event p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      margin-bottom: 0;
+    }
+    .timeline-event::after {
+      content: '';
+      position: absolute;
+      top: 2.5rem;
+      width: 18px;
+      height: 18px;
+      background: var(--accent-primary);
+      border-radius: 50%;
+      z-index: 3;
+      border: 3px solid var(--bg-dark);
+    }
+    .timeline-event.left::after { right: -9px;}
+    .timeline-event.right::after { left: -9px;}
+    @media (max-width: 991px) {
+      .timeline-event, .timeline-event.left, .timeline-event.right {
+        width: 100%;
+        left: 0;
+        text-align: left;
+      }
+      .timeline-event.left .timeline-event-content,
+      .timeline-event.right .timeline-event-content {
+        margin: 0 0 2rem 0;
+      }
+      .timeline::before { left: 20px;}
+      .timeline-event::after { left: 10px; right: auto;}
+    }
+    .java-demo-section .java-code-block {
+      background: #181f23;
+      color: #b5f5e0;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+      overflow-x: auto;
+      box-shadow: 0 2px 10px rgba(0,221,179,0.04);
+      transition: background 0.2s;
+      position: relative;
+    }
+    .java-demo-section .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--accent-primary);
+      color: #181f23;
+      border: none;
+      border-radius: 6px;
+      padding: 2px 10px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .java-demo-section .copy-btn:hover {
+      background: var(--accent-hover);
+      color: #000;
+    }
+    .testimonials-section .testimonial {
+      background: #181f23;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,221,179,0.04);
+      color: var(--text-primary);
+      font-style: italic;
+      position: relative;
+    }
+    .testimonials-section .testimonial .author {
+      font-weight: bold;
+      color: var(--accent-primary);
+      margin-top: 1rem;
+      font-style: normal;
+    }
+    .faq-section .accordion-button {
+      background: #181f23;
+      color: var(--accent-primary);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .faq-section .accordion-button:not(.collapsed) {
+      background: var(--accent-primary);
+      color: #181f23;
+    }
+    .faq-section .accordion-body {
+      background: #181f23;
+      color: var(--text-secondary);
+    }
+    .partners {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin: 3rem 0;
+      animation: fadeInUp 1.2s;
+    }
+    .partner-logo {
+      height: 48px;
+      filter: grayscale(1) brightness(1.2);
+      opacity: 0.7;
+      transition: filter 0.3s, opacity 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+    .partner-logo:hover {
+      filter: none;
+      opacity: 1;
+      transform: scale(1.12) rotate(-2deg);
+    }
+    footer {
+      background-color: var(--bg-card);
+      border-top: 1px solid var(--border-color);
+      padding: 3rem 1rem;
+      color: var(--text-secondary);
+      text-align: center;
+      margin-top: 4rem;
+      animation: fadeInUp 1.2s;
+    }
+    footer a {
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+      font-size: 1.5rem;
+    }
+    footer a:hover {
+      color: var(--accent-primary);
+    }
+    .footer-links a {
+      font-size: 1rem;
+      margin: 0 1rem;
+    }
+    @media (max-width: 991px) {
+      .about-hero { padding: 4rem 0 2rem 0;}
+      .section-title { font-size: 2rem;}
+      .about-summary, .skills-section, .leadership-section, .philosophy-section, .publications-section, .java-demo-section, .awards-section, .hobbies-section, .volunteer-section, .testimonials-section, .faq-section { padding: 1.5rem 1rem;}
+    }
+    @media (max-width: 767px) {
+      .about-hero { padding: 2rem 0 1rem 0;}
+      .timeline-event, .timeline-event.left, .timeline-event.right { padding: 1.2rem 0.5rem;}
+      .timeline-event-content { padding: 1rem 1rem;}
+      .partners { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="joeindex.html">VeteranDev.</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+        <li class="nav-item"><a class="nav-link" href="joeindex.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="joeabout.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="joeprojects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="joecontact.html">Contact</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Language</a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="joeabout.html">English</a></li>
+            <li><a class="dropdown-item" href="trjoeabout.html">Türkçe</a></li>
+          </ul>
+        </li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+          <a class="nav-link" href="catalog.html" title="Back to main portfolio projects" style="font-style: italic; color: #ff6b6b;">← Back to Portfolio</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="about-hero">
+  <div class="container">
+    <h1>About the Veteran Software Architect</h1>
+    <p>
+      A five-decade journey through the evolution of technology. From mainframes to the cloud, from assembly to AI, I have architected, engineered, and led teams to deliver robust, scalable, and innovative solutions that have shaped industries and inspired generations.
+    </p>
+    <a href="joeprojects.html" class="btn btn-primary" role="button">See My Projects</a>
+  </div>
+</header>
+
+<main>
+  <section class="about-summary">
+    <h2>Career Overview</h2>
+    <p>
+      With over 50 years in the software industry, I have been at the forefront of every major technological shift. My experience spans legacy system modernization, distributed systems, cloud-native architectures, and AI-driven solutions. I have led global teams, mentored hundreds of engineers, and delivered mission-critical projects for Fortune 500 companies and startups alike.
+    </p>
+    <p>
+      My philosophy is simple: build for the future, learn from the past, and empower people along the way.
+    </p>
+    <p>
+      <b>Key Values:</b> Integrity, innovation, mentorship, and a relentless pursuit of excellence. I believe in building not just software, but also strong, diverse, and empowered teams.
+    </p>
+    <p>
+      <b>Fun Fact:</b> I wrote my first program on punch cards and my latest on the cloud!
+    </p>
+  </section>
+
+  <section class="about-timeline">
+    <h2 class="section-title">Timeline of Innovation</h2>
+    <div class="timeline">
+      <div class="timeline-event left">
+        <div class="timeline-event-content">
+          <h3>1970s: Mainframe Foundations</h3>
+          <p>Developed core banking and logistics systems in COBOL and Assembly on IBM mainframes. Set the groundwork for secure, reliable enterprise computing.</p>
+        </div>
+      </div>
+      <div class="timeline-event right">
+        <div class="timeline-event-content">
+          <h3>1980s: The PC & Networking Era</h3>
+          <p>Pioneered C/C++ applications and early networking protocols. Helped businesses transition to personal computing and LANs.</p>
+        </div>
+      </div>
+      <div class="timeline-event left">
+        <div class="timeline-event-content">
+          <h3>1990s: Web Revolution</h3>
+          <p>Architected large-scale e-commerce and ERP platforms using Java, Oracle, and early web technologies. Led teams through the dot-com boom.</p>
+        </div>
+      </div>
+      <div class="timeline-event right">
+        <div class="timeline-event-content">
+          <h3>2000s: Globalization & Agile</h3>
+          <p>Adopted Agile, DevOps, and global delivery models. Built distributed teams and delivered SaaS products for international markets.</p>
+        </div>
+      </div>
+      <div class="timeline-event left">
+        <div class="timeline-event-content">
+          <h3>2010s: Cloud & AI</h3>
+          <p>Led cloud migrations (AWS, Azure), implemented microservices, and integrated AI/ML into enterprise solutions. Mentored the next generation of architects.</p>
+        </div>
+      </div>
+      <div class="timeline-event right">
+        <div class="timeline-event-content">
+          <h3>2020s: Thought Leadership</h3>
+          <p>Speaker, author, and advisor. Focused on ethical AI, sustainable software, and empowering diverse engineering teams worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-section">
+    <h2>Technical Skills</h2>
+    <div class="skills-list">
+      <div class="skill-card"><i class="fab fa-python"></i> Python</div>
+      <div class="skill-card"><i class="fab fa-js-square"></i> JavaScript/TypeScript</div>
+      <div class="skill-card"><i class="fab fa-java"></i> Java</div>
+      <div class="skill-card"><i class="fab fa-aws"></i> AWS & Cloud</div>
+      <div class="skill-card"><i class="fas fa-database"></i> SQL/NoSQL</div>
+      <div class="skill-card"><i class="fas fa-network-wired"></i> Networking</div>
+      <div class="skill-card"><i class="fas fa-robot"></i> AI/ML</div>
+      <div class="skill-card"><i class="fab fa-docker"></i> Docker/Kubernetes</div>
+      <div class="skill-card"><i class="fas fa-lock"></i> Cybersecurity</div>
+      <div class="skill-card"><i class="fas fa-cogs"></i> DevOps</div>
+      <div class="skill-card"><i class="fas fa-code"></i> C/C++/Rust/Go</div>
+      <div class="skill-card"><i class="fas fa-cloud"></i> Azure/GCP</div>
+      <div class="skill-card"><i class="fas fa-sitemap"></i> Architecture</div>
+      <div class="skill-card"><i class="fas fa-users"></i> Team Leadership</div>
+    </div>
+  </section>
+
+  <section class="leadership-section">
+    <h2>Leadership & Mentoring</h2>
+    <ul>
+      <li>Mentored 500+ engineers, many now leaders in their fields</li>
+      <li>Built and managed global teams across 4 continents</li>
+      <li>Speaker at 30+ international conferences and workshops</li>
+      <li>Advocate for diversity, equity, and inclusion in tech</li>
+      <li>Developed internal training programs for Fortune 100 companies</li>
+      <li>Published author on software design and leadership</li>
+    </ul>
+  </section>
+
+  <section class="philosophy-section">
+    <h2>Philosophy & Approach</h2>
+    <p>
+      Software is both art and science. I believe in building systems that are not only robust and scalable, but also elegant and maintainable. My approach is rooted in curiosity, discipline, and a relentless pursuit of quality.
+    </p>
+    <p>
+      I value lifelong learning, ethical engineering, and empowering others to reach their full potential. Every project is an opportunity to innovate and inspire.
+    </p>
+    <p>
+      <b>Favorite Quote:</b> "Simplicity is the soul of efficiency." – Austin Freeman
+    </p>
+  </section>
+
+  <section class="awards-section">
+    <h2>Awards & Recognitions</h2>
+    <ul>
+      <li>ACM Fellow (2015)</li>
+      <li>JavaOne Rockstar Speaker (2018, 2019)</li>
+      <li>Oracle Groundbreaker Ambassador (2020)</li>
+      <li>Microsoft MVP (2012-2016)</li>
+      <li>IEEE Lifetime Achievement Award (2021)</li>
+    </ul>
+  </section>
+
+  <section class="hobbies-section">
+    <h2>Hobbies & Interests</h2>
+    <ul>
+      <li>Open-source contributor (Spring, Hibernate, Apache Commons)</li>
+      <li>Chess and Go enthusiast</li>
+      <li>Retro computing and hardware restoration</li>
+      <li>Traveling and speaking at tech conferences</li>
+      <li>Mentoring young coders and STEM students</li>
+    </ul>
+  </section>
+
+  <section class="volunteer-section">
+    <h2>Volunteer Work</h2>
+    <ul>
+      <li>Code.org mentor for underprivileged youth</li>
+      <li>IEEE Computer Society – Outreach programs</li>
+      <li>Open Source for Good – Project lead</li>
+      <li>Local hackathon judge and organizer</li>
+    </ul>
+  </section>
+
+  <section class="testimonials-section">
+    <h2>Testimonials</h2>
+    <div class="testimonial">
+      "A true architect. His vision and technical depth transformed our infrastructure and accelerated our growth."
+      <div class="author">– James L., CTO, FinTech Corp</div>
+    </div>
+    <div class="testimonial">
+      "Mentorship from a legend. I learned more in a year than in my previous decade of work."
+      <div class="author">– Sophia M., Lead Engineer, HealthTech</div>
+    </div>
+    <div class="testimonial">
+      "His AI-driven logistics solution saved us millions and set a new industry standard."
+      <div class="author">– Wei Zhang, VP Engineering, Retail Giant</div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item bg-transparent border-0">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+            What industries have you worked in?
+          </button>
+        </h2>
+        <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Finance, healthcare, retail, logistics, government, telecom, and more.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-transparent border-0">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+            Do you offer consulting or mentoring?
+          </button>
+        </h2>
+        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, I provide both consulting and mentoring for organizations and individuals.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-transparent border-0">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+            Can you help with legacy system modernization?
+          </button>
+        </h2>
+        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Absolutely. I specialize in migrating legacy systems to modern, scalable architectures.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-transparent border-0">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+            Are you available for speaking engagements?
+          </button>
+        </h2>
+        <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, I am available for conferences, webinars, and workshops worldwide.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="publications-section">
+    <h2>Publications & Talks</h2>
+    <ul class="publications-list">
+      <li><b>Book:</b> "Modern Software Architecture: Patterns for the Next Decade" (2022)</li>
+      <li><b>Book:</b> "Legacy to Cloud: A Migration Playbook" (2017)</li>
+      <li><b>Paper:</b> "Distributed Systems in the Real World" – ACM SIGOPS (2015)</li>
+      <li><b>Talk:</b> "Ethical AI: Building Trustworthy Systems" – TechLead Summit (2023)</li>
+      <li><b>Talk:</b> "Mentoring Engineers for the Future" – DevCon (2021)</li>
+      <li><b>Workshop:</b> "DevOps at Scale" – AWS re:Invent (2019)</li>
+    </ul>
+  </section>
+
+  <!-- Java Code Demo Section -->
+  <section class="java-demo-section">
+    <h2>Java Code Showcase</h2>
+    <div class="java-code-block" id="javaCode1">
+      <button class="copy-btn" onclick="copyJavaCode('javaCode1')">Copy</button>
+<pre><code>// Java: Singleton Pattern Example
+public class DatabaseConnection {
+    private static DatabaseConnection instance;
+    private DatabaseConnection() {
+        // private constructor
+    }
+    public static synchronized DatabaseConnection getInstance() {
+        if (instance == null) {
+            instance = new DatabaseConnection();
+        }
+        return instance;
+    }
+    public void connect() {
+        System.out.println("Connected to DB!");
+    }
+}
+</code></pre>
+    </div>
+    <div class="java-code-block" id="javaCode2">
+      <button class="copy-btn" onclick="copyJavaCode('javaCode2')">Copy</button>
+<pre><code>// Java: RESTful Controller Example (Spring Boot)
+@RestController
+@RequestMapping("/api/products")
+public class ProductController {
+    @Autowired
+    private ProductService productService;
+
+    @GetMapping("/{id}")
+    public ResponseEntity&lt;Product&gt; getProduct(@PathVariable Long id) {
+        Product product = productService.findById(id);
+        if(product == null) return ResponseEntity.notFound().build();
+        return ResponseEntity.ok(product);
+    }
+
+    @PostMapping
+    public ResponseEntity&lt;Product&gt; createProduct(@RequestBody Product product) {
+        Product created = productService.save(product);
+        return ResponseEntity.status(HttpStatus.CREATED).body(created);
+    }
+}
+</code></pre>
+    </div>
+    <div class="java-code-block" id="javaCode3">
+      <button class="copy-btn" onclick="copyJavaCode('javaCode3')">Copy</button>
+<pre><code>// Java: Multithreading Example
+public class Counter extends Thread {
+    private int count = 0;
+    public void run() {
+        for(int i=0; i&lt;1000; i++) {
+            increment();
+        }
+    }
+    public synchronized void increment() {
+        count++;
+    }
+    public int getCount() { return count; }
+}
+</code></pre>
+    </div>
+    <div class="java-code-block" id="javaCode4">
+      <button class="copy-btn" onclick="copyJavaCode('javaCode4')">Copy</button>
+<pre><code>// Java: Lambda and Streams Example
+import java.util.*;
+public class StreamDemo {
+    public static void main(String[] args) {
+        List&lt;String&gt; names = Arrays.asList("Joe", "Anna", "Mike", "Sara");
+        names.stream()
+            .filter(n -&gt; n.startsWith("J"))
+            .map(String::toUpperCase)
+            .forEach(System.out::println);
+    }
+}
+</code></pre>
+    </div>
+    <div class="java-code-block" id="javaCode5">
+      <button class="copy-btn" onclick="copyJavaCode('javaCode5')">Copy</button>
+<pre><code>// Java: Spring Boot Service Layer Example
+@Service
+public class UserService {
+    @Autowired
+    private UserRepository userRepository;
+
+    public List&lt;User&gt; getAllUsers() {
+        return userRepository.findAll();
+    }
+
+    public User saveUser(User user) {
+        return userRepository.save(user);
+    }
+}
+</code></pre>
+    </div>
+    <div class="java-code-block" id="javaCode6">
+      <button class="copy-btn" onclick="copyJavaCode('javaCode6')">Copy</button>
+<pre><code>// Java: JavaFX Animation Example
+import javafx.animation.*;
+import javafx.scene.shape.Rectangle;
+import javafx.util.Duration;
+
+Rectangle rect = new Rectangle(100, 40);
+TranslateTransition tt = new TranslateTransition(Duration.millis(2000), rect);
+tt.setByX(300);
+tt.setCycleCount(2);
+tt.setAutoReverse(true);
+tt.play();
+</code></pre>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="partners">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="partner-logo" alt="Microsoft">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="partner-logo" alt="Google">
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container text-center">
+    <div class="footer-links mb-3">
+      <a href="joeindex.html">Home</a> |
+      <a href="joeabout.html">About</a> |
+      <a href="joeprojects.html">Projects</a> |
+      <a href="joecontact.html">Contact</a>
+    </div>
+    <p class="mb-2">© <span id="copyright-year"></span> VeteranDev. All rights reserved.</p>
+    <p class="mb-3">
+      <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="ms-3"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" class="ms-3"><i class="fab fa-twitter"></i></a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Copyright year
+  document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+  // Timeline and skills animation on scroll
+  function animateOnScroll() {
+    document.querySelectorAll('.timeline-event, .skill-card').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 60) {
+        el.classList.add('visible');
+      }
+    });
+  }
+  window.addEventListener('scroll', animateOnScroll);
+  animateOnScroll();
+
+  // Java code copy to clipboard
+  function copyJavaCode(id) {
+    const code = document.querySelector(`#${id} pre code`).innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      const btn = document.querySelector(`#${id} .copy-btn`);
+      btn.textContent = "Copied!";
+      setTimeout(() => btn.textContent = "Copy", 1200);
+    });
+  }
+</script>
+</body>
+</html>

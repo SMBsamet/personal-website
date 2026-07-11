@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-theme="light">
+
+<head>
+  <meta name="google-adsense-account" content="ca-pub-6088430077678432">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6088430077678432"
+     crossorigin="anonymous"></script>
+  <title>Samet Bozkurt | Computer Engineer & Software Developer – Portfolio & Projects</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official portfolio of Samet Bozkurt. Explore computer engineering projects, software development experience, and contact information.">
+  <meta name="google-site-verification" content="IszycLLpZp5D8UDjfVkapTSP5uksdy5bf8d4aDN1LsA" />
+
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href="https://sametbozkurt.com.tr/index.html">
+  <link rel="alternate" href="https://sametbozkurt.com.tr/index.html" hreflang="en">
+  <link rel="alternate" href="https://sametbozkurt.com.tr/trindex.html" hreflang="tr">
+  <link rel="alternate" href="https://sametbozkurt.com.tr/index.html" hreflang="x-default">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Samet Bozkurt | Computer Engineer & Software Developer" />
+  <meta property="og:description" content="Explore computer engineering projects, software development experience, and contact information." />
+  <meta property="og:image" content="https://sametbozkurt.com.tr/Pictures/logo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://sametbozkurt.com.tr/index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Samet Bozkurt" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Samet Bozkurt | Computer Engineer & Software Developer" />
+  <meta name="twitter:description" content="Explore computer engineering projects, software development experience, and contact information." />
+  <meta name="twitter:image" content="https://sametbozkurt.com.tr/Pictures/logo.png" />
+
+  <!-- Robots & Author -->
+  <meta name="author" content="Samet Bozkurt">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+  <!-- Connections -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://images.pexels.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+
+  <!-- Favicons / PWA -->
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon/apple-icon-180x180.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+  <!-- Preload key images -->
+  <link rel="preload" as="image" href="Pictures/video-poster.jpg">
+  <link rel="preload" as="image" href="Pictures/logo.png" fetchpriority="high">
+
+<script>  
+  (function () { const userLang = navigator.language || navigator.userLanguage; 
+    if (userLang.toLowerCase().startsWith('tr')) 
+    { window.location.replace('trindex.html'); } })(); 
+</script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      background: #f8f9fa;
+    }
+    .section-heading {
+      margin-bottom: 4rem;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+    .section-heading::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: #0d6efd;
+      border-radius: 2px;
+    }
+    .navbar-brand {
+      font-weight: bolder;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      user-select: none;
+    }
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 80px;
+      padding-bottom: 40px;
+    }
+    .typed-text {
+      color: #EA4C89;
+    }
+    .hero-tech-keywords {
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+    .tech-keyword {
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .tech-keyword:hover,
+    .tech-keyword.active {
+      color: #fd7e14;
+    }
+    .hero-tech-keywords .separator {
+      color: rgba(255, 255, 255, 0.5);
+      margin: 0 10px;
+      font-weight: 300;
+      cursor: default;
+    }
+    #hero-explanation-box {
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+      color: #f0f0f0;
+      border-radius: 8px;
+      padding: 0 20px;
+      margin-top: 20px;
+      max-width: 600px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out, opacity 0.5s ease-out, padding 0.5s ease-out;
+    }
+    #hero-explanation-box.show {
+      padding: 20px;
+      max-height: 200px;
+      opacity: 1;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      z-index: 1030;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .whatsapp-float:hover {
+      background-color: #1ebe57;
+      transform: scale(1.1);
+      color: white;
+    }
+    section {
+      padding: 80px 15px;
+    }
+    #about,
+    #contact,
+    #services {
+      background-color: #ffffff;
+    }
+    .project-card,
+    .service-card,
+    .testimonial-card {
+      height: 100%;
+    }
+    .project-card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      background: #fff;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+    .project-card .card-img-top {
+      border-bottom: 1px solid #eee;
+      height: 200px;
+      object-fit: cover;
+    }
+    .project-card .tech-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.3rem 0.6rem;
+    }
+    .project-card .btn-project {
+      border-radius: 50px;
+      font-weight: 600;
+      padding: 0.5rem 1.2rem;
+      transition: all 0.3s ease;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+      border: 1px solid #e9ecef;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+    .service-card .icon {
+      font-size: 3rem;
+      color: #0d6efd;
+      margin-bottom: 1.5rem;
+    }
+    .skill-category {
+      margin-bottom: 2.5rem;
+    }
+    .skill-category h4 {
+      margin-bottom: 1.5rem;
+      color: #343a40;
+      font-weight: 600;
+    }
+    .skill-item {
+      display: inline-flex;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 10px 20px;
+      margin: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    .skill-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-color: #0d6efd;
+    }
+    .skill-item i {
+      font-size: 1.5rem;
+      margin-right: 12px;
+      color: #0d6efd;
+    }
+    .skill-item span {
+      font-weight: 500;
+    }
+    .skill-item.passive {
+      background-color: #f8f9fa;
+      border-color: #e9ecef;
+      box-shadow: none;
+    }
+    .skill-item.passive i,
+    .skill-item.passive span {
+      color: #adb5bd !important;
+    }
+    .skill-item.passive:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: #e9ecef;
+    }
+    .testimonial-card {
+      background: #fff;
+      border-left: 5px solid #0d6efd;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+      text-align: left;
+    }
+    .testimonial-card p {
+      font-style: italic;
+      color: #555;
+    }
+    .testimonial-card .testimonial-author {
+      font-weight: 700;
+      color: #000;
+      margin-top: 1rem;
+    }
+    .testimonial-card .testimonial-author span {
+      font-weight: 400;
+      color: #777;
+      font-size: 0.9rem;
+    }
+    #contact .form-control,
+    #contact button {
+      border-radius: 0.5rem;
+    }
+    .contact-btn {
+      background-color: #0d6efd;
+      color: white;
+      border-radius: 50px;
+      padding: 12px 30px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+    .contact-btn:hover {
+      background-color: #0a58ca;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(13, 110, 253, 0.6);
+      color: white;
+    }
+    .contact-btn i {
+      pointer-events: none;
+    }
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 40px 15px;
+    }
+    footer a {
+      color: #ccc;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    .footer-link {
+      text-decoration: none;
+    }
+    .footer-icon {
+      font-size: 1.5rem;
+      margin: 0 12px;
+    }
+    .stats-section {
+      background-color: #343a40;
+      padding: 80px 15px;
+    }
+    .stat-item .stat-number {
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: #fd7e14;
+      line-height: 1.2;
+    }
+    .stat-item .stat-text {
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #f8f9fa;
+      margin-top: 10px;
+    }
+    .markets-section {
+      background-color: #222;
+      color: #f8f9fa;
+    }
+    .navbar-brand img {
+      height: 50px;
+      width: auto;
+    }
+    .navbar.sticky-top {
+      padding-top: 0.01rem;
+      padding-bottom: 0.5rem;
+      transition: padding 0.3s ease;
+    }
+    @media (max-width: 991px) {
+      .navbar-nav {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+    .hero-video-background {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: -1; 
+    }
+
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(21, 34, 56, 0.7); 
+      z-index: 0;  
+    }
+  </style>
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Samet Bozkurt | Computer Engineer & Software Developer",
+    "url":"https://sametbozkurt.com.tr/",
+    "alternateName":"Samet Bozkurt",
+    "inLanguage":"en",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://sametbozkurt.com.tr/search?q={query}",
+      "query-input":"required name=query"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Samet Bozkurt",
+    "jobTitle":"Computer Engineer & Software Developer",
+    "url":"https://sametbozkurt.com.tr/",
+    "image":"https://sametbozkurt.com.tr/Pictures/logo.png",
+    "address": {
+      "@type":"PostalAddress",
+      "addressCountry":"TR",
+      "addressLocality":"Muğla"
+    },
+    "email":"info@sametbozkurt.com.tr",
+    "sameAs":[
+      "https://github.com/",
+      "https://instagram.com/",
+      "https://x.com/"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://sametbozkurt.com.tr/index.html"}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm" aria-label="Primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="Pictures/logo.png" alt="Samet Bozkurt • Logo" width="161" height="50" decoding="async" fetchpriority="high">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Catalog</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Language
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item active" href="index.html" hreflang="en">English</a></li>
+              <li><a class="dropdown-item" href="trindex.html" hreflang="tr">Türkçe</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <a href="https://wa.me/905555555555" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contact via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+<header id="home" class="text-center hero-section text-white">
+  <video autoplay loop muted playsinline preload="metadata" poster="Pictures/video-poster.jpg" class="hero-video-background">
+    <source src="Pictures/background-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container" style="position: relative; z-index: 1;">
+    <h1 class="display-3 fw-bold mb-3" data-aos="fade-down">
+      I Build <span class="typed-text"></span> Websites
+    </h1>
+    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">
+      Creating digital experiences that engage and convert.
+    </p>
+    <a href="#about" class="btn btn-primary btn-lg px-5 py-3 mb-4" data-aos="fade-up" data-aos-delay="400">Learn More</a>
+
+    <div class="hero-tech-keywords" data-aos="fade-up" data-aos-delay="600">
+      <span class="tech-keyword" data-explanation="The standard markup language for documents designed to be displayed in a web browser.">HTML5</span>
+      <span class="separator">|</span>
+      <span class="tech-keyword" data-explanation="A style sheet language used for describing the presentation of a document written in a markup language like HTML.">CSS3</span>
+      <span class="separator">|</span>
+      <span class="tech-keyword" data-explanation="A programming language that enables you to create dynamically updating content, control multimedia, and animate images.">JavaScript</span>
+      <span class="separator">|</span>
+      <span class="tech-keyword" data-explanation="The process of enhancing user satisfaction with a product by improving the usability, accessibility, and pleasure provided in the interaction.">UI/UX Design</span>
+    </div>
+    <div id="hero-explanation-box"></div>
+  </div>
+</header>
+
+  <section id="about" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center section-heading">About Me</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <p class="lead">Hello! I'm Samet Bozkurt, a passionate Computer Engineering student and software developer based in Turkey. I have a great interest in designing and building innovative software solutions that make a difference.</p>
+          <p>With a solid foundation in programming, algorithms, and system design, I enjoy solving challenging problems and turning ideas into reality. I am constantly striving to improve my skills and keep up with industry trends.</p>
+          <p>Feel free to explore my work and contact me if you have any opportunities or ideas you'd like to discuss!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center section-heading">My Interests</h2>
+      <div class="row gy-4 text-center">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="service-card">
+            <div class="icon"><i class="fas fa-code"></i></div>
+            <h4 class="fw-bold">Front-End Development</h4>
+            <p class="text-muted">Learning the fundamentals of HTML, CSS, and JavaScript, and practicing building user interfaces for the web.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="service-card">
+            <div class="icon"><i class="fas fa-palette"></i></div>
+            <h4 class="fw-bold">UI/UX Design</h4>
+            <p class="text-muted">Exploring user-friendly and aesthetic design principles, and learning about clean and modern interfaces.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="service-card">
+            <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+            <h4 class="fw-bold">Responsive Web Design</h4>
+            <p class="text-muted">Honing my skills by applying responsive design techniques to ensure websites look great on different devices.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center section-heading">Featured Projects</h2>
+      <div class="row gy-5 justify-content-center">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card project-card w-100">
+            <img src="https://images.pexels.com/photos/7735630/pexels-photo-7735630.jpeg" class="card-img-top" alt="Responsive personal portfolio website preview" loading="lazy" width="400" height="267">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Personal Portfolio</h5>
+              <p class="card-text small flex-grow-1">A responsive and modern personal portfolio website to showcase my skills and projects.</p>
+              <div class="mb-3">
+                <span class="badge rounded-pill text-bg-primary tech-badge">HTML5</span>
+                <span class="badge rounded-pill text-bg-secondary tech-badge">CSS3</span>
+                <span class="badge rounded-pill text-bg-success tech-badge">Bootstrap</span>
+                <span class="badge rounded-pill text-bg-warning tech-badge">JavaScript</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="joeindex.html" class="btn btn-primary btn-project w-100">Live Demo</a>
+                <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-project w-100"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card project-card w-100">
+            <img src="https://images.unsplash.com/photo-1508928807352-24a4adbb6795?q=80&w=1170&auto=format&fit=crop" class="card-img-top" alt="Local market e-commerce website example" loading="lazy" width="400" height="267">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Local Market Website</h5>
+              <p class="card-text small flex-grow-1">An e-commerce platform for a local market, featuring product catalogs and a shopping cart.</p>
+              <div class="mb-3">
+                <span class="badge rounded-pill text-bg-primary tech-badge">HTML5</span>
+                <span class="badge rounded-pill text-bg-secondary tech-badge">CSS3</span>
+                <span class="badge rounded-pill text-bg-success tech-badge">Bootstrap</span>
+                <span class="badge rounded-pill text-bg-warning tech-badge">JavaScript</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="khanindex.html" class="btn btn-primary btn-project w-100">Live Demo</a>
+                <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-project w-100"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card project-card w-100">
+            <img src="https://images.pexels.com/photos/4057663/pexels-photo-4057663.jpeg" class="card-img-top" alt="Modern news portal layout with categories and articles" loading="lazy" width="400" height="267">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">News Portal</h5>
+              <p class="card-text small flex-grow-1">A dynamic news portal website with categories, articles, and a content management system.</p>
+              <div class="mb-3">
+                <span class="badge rounded-pill text-bg-primary tech-badge">HTML5</span>
+                <span class="badge rounded-pill text-bg-secondary tech-badge">CSS3</span>
+                <span class="badge rounded-pill text-bg-success tech-badge">Bootstrap</span>
+                <span class="badge rounded-pill text-bg-warning tech-badge">JavaScript</span>
+              </div>
+              <div class="mt-auto d-flex gap-2">
+                <a href="newsindex.html" class="btn btn-primary btn-project w-100">Live Demo</a>
+                <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-project w-100"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-5">
+    <div class="container text-center" data-aos="fade-up">
+      <h2 class="section-heading">My Tech Stack</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="skill-category">
+            <h4>Languages</h4>
+            <div class="d-flex justify-content-center flex-wrap">
+              <div class="skill-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+              <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+              <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+              <div class="skill-item passive"><i class="fab fa-python"></i><span>Python</span></div>
+              <div class="skill-item passive"><i class="fab fa-java"></i><span>Java</span></div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4>Frameworks & Libraries</h4>
+            <div class="d-flex justify-content-center flex-wrap">
+              <div class="skill-item"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
+              <div class="skill-item passive"><i class="fab fa-react"></i><span>React</span></div>
+              <div class="skill-item passive"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+              <div class="skill-item passive"><span>Django</span></div>
+              <div class="skill-item passive"><span>Spring Boot</span></div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4>Tools & Platforms</h4>
+            <div class="d-flex justify-content-center flex-wrap">
+              <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git & GitHub</span></div>
+              <div class="skill-item passive"><i class="fab fa-docker"></i><span>Docker</span></div>
+              <div class="skill-item passive"><i class="fas fa-database"></i><span>SQL & NoSQL</span></div>
+              <div class="skill-item passive"><span>Postman</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats" class="stats-section" data-aos="fade-up">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <div class="stat-item">
+            <div class="stat-number"><span class="count-up" data-target="99">0</span>%</div>
+            <p class="stat-text">Client Satisfaction</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <div class="stat-item">
+            <div class="stat-number"><span class="count-up" data-target="3">0</span>+</div>
+            <p class="stat-text">Projects Completed</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="stat-item">
+            <div class="stat-number"><span class="count-up" data-target="10">0</span>+</div>
+            <p class="stat-text">Problems Solved</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item">
+            <div class="stat-number"><span class="count-up" data-target="3">0</span>+</div>
+            <p class="stat-text">Happy Clients</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center section-heading">Get in Touch</h2>
+      <div class="d-flex justify-content-center flex-wrap gap-3 mb-5">
+        <button id="btnEmail" class="contact-btn d-flex align-items-center gap-2">
+          <i class="fas fa-envelope fa-lg"></i> Send Email
+        </button>
+        <a href="https://wa.me/905555555555" target="_blank" rel="noopener" class="contact-btn d-flex align-items-center gap-2">
+          <i class="fab fa-whatsapp fa-lg"></i> WhatsApp
+        </a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener" class="contact-btn d-flex align-items-center gap-2">
+          <i class="fab fa-instagram fa-lg"></i> Instagram
+        </a>
+      </div>
+      <div id="emailForm" style="display:none; max-width: 600px; margin: 0 auto;" data-aos="fade-down" data-aos-duration="500">
+        <form id="contactForm" novalidate>
+          <div class="mb-3">
+            <label for="nameContact" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="nameContact" name="name" placeholder="Enter your name" required />
+          </div>
+          <div class="mb-3">
+            <label for="emailContact" class="form-label">Your Email Address</label>
+            <input type="email" class="form-control" id="emailContact" name="email" placeholder="Enter your email address" required />
+          </div>
+          <div class="mb-3">
+            <label for="messageContact" class="form-label">Your Message</label>
+            <textarea class="form-control" id="messageContact" name="message" rows="5" placeholder="Write your message here" required></textarea>
+          </div>
+          <input type="hidden" name="lang" value="en" />
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-5 py-2">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11" aria-live="polite" aria-atomic="true">
+    <div id="liveToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="toast-body"></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <section id="testimonials" class="bg-light py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center section-heading">Testimonials</h2>
+      <div class="row gy-4 justify-content-center">
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="testimonial-card">
+            <p>"Samet designed a simple and effective website for our market. Our customers find it very easy to use, and our online orders have increased. A talented and reliable young man."</p>
+            <div class="testimonial-author">Hasan Yılmaz⭐⭐⭐⭐⭐ <span>- Owner, Yılmaz Market</span></div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="testimonial-card">
+            <p>"We needed a modern look for our local shop, and Samet delivered just that. He listened to our needs and created a great showcase for our products. We are very pleased with his work."</p>
+            <div class="testimonial-author">Fatma Öztürk⭐⭐⭐⭐⭐ <span>- Owner, Öztürk Boutique</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container py-4 text-light">
+      <div class="row gy-4 text-center text-md-start">
+        <div class="col-md-4">
+          <h5 class="mb-3 text-white">Samet Bozkurt</h5>
+          <p>A passionate computer engineering student and software developer. Eager to learn, create, and contribute to impactful projects.</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="mb-3 text-white">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#about" class="footer-link">About Me</a></li>
+            <li><a href="#services" class="footer-link">Interests</a></li>
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="mb-3 text-white">Contact Info</h5>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>Muğla, Turkey</li>
+            <li><i class="fas fa-envelope me-2"></i><a href="mailto:info@sametbozkurt.com.tr" class="footer-link">info@sametbozkurt.com.tr</a></li>
+            <li><i class="fas fa-phone me-2"></i><a href="tel:+905555555555" class="footer-link">+90 555 555 55 55</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center social-icons mt-4">
+        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Visit our Instagram page" class="footer-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="Visit our GitHub profile" class="footer-icon"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/" target="_blank" rel="noopener" aria-label="Visit our X (Twitter) profile" class="footer-icon"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://wa.me/905555555555" target="_blank" rel="noopener" aria-label="Contact us via WhatsApp" class="footer-icon"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <hr class="my-4" style="border-color: #444;" />
+      <p class="text-center small mb-0">&copy; 2025 Samet Bozkurt. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // AOS (Animate on Scroll)
+      AOS.init({ duration: 800, once: true, offset: 50 });
+
+      // Typed.js (typing effect)
+      new Typed('.typed-text', {
+        strings: ['Dynamic', 'Fast', 'Responsive', 'Modern', 'Secure'],
+        typeSpeed: 70,
+        backSpeed: 40,
+        loop: true,
+        smartBackspace: true
+      });
+
+      // Tech keywords explanation box
+      const techKeywords = document.querySelectorAll('.tech-keyword');
+      const explanationBox = document.getElementById('hero-explanation-box');
+      techKeywords.forEach(keyword => {
+        keyword.addEventListener('click', function() {
+          const explanation = this.getAttribute('data-explanation');
+          const isActive = this.classList.contains('active');
+          techKeywords.forEach(kw => kw.classList.remove('active'));
+          if (isActive) {
+            explanationBox.classList.remove('show');
+            explanationBox.textContent = '';
+          } else {
+            this.classList.add('active');
+            explanationBox.textContent = explanation;
+            explanationBox.classList.add('show');
+          }
+        });
+      });
+
+      // Counters
+      const animateCountUp = (el) => {
+        const target = +el.getAttribute('data-target');
+        let count = 0;
+        const duration = 2000;
+        if (target === 0) {
+          el.textContent = 0;
+          return;
+        }
+        const stepTime = Math.max(1, Math.floor(duration / target));
+        const timer = setInterval(() => {
+          count++;
+          el.textContent = count;
+          if (count >= target) {
+            el.textContent = target; // Ensure it ends exactly on target
+            clearInterval(timer);
+          }
+        }, stepTime);
+      };
+      const statsSection = document.querySelector('#stats');
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            document.querySelectorAll('.count-up').forEach(el => animateCountUp(el));
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      if (statsSection) {
+        observer.observe(statsSection);
+      }
+
+      // Toggle form
+      const btnEmail = document.getElementById('btnEmail');
+      const emailForm = document.getElementById('emailForm');
+      btnEmail.addEventListener('click', () => {
+        const isHidden = emailForm.style.display === 'none' || emailForm.style.display === '';
+        emailForm.style.display = isHidden ? 'block' : 'none';
+        if (isHidden) {
+          setTimeout(() => {
+            emailForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        }
+      });
+
+      // Form submission
+      const contactForm = document.getElementById('contactForm');
+      const toastEl = document.getElementById('liveToast');
+      const toastBody = document.getElementById('toast-body');
+      const toast = new bootstrap.Toast(toastEl, { delay: 3500 });
+      if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const formData = new FormData(contactForm);
+          const submitButton = contactForm.querySelector('button[type="submit"]');
+          submitButton.disabled = true;
+          submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+          try {
+            const response = await fetch('send_mail.php', {
+              method: 'POST',
+              body: formData
+            });
+            const result = await response.json();
+            if (result.status === 'success') {
+              toastEl.classList.remove('bg-danger');
+              toastEl.classList.add('bg-success');
+              contactForm.reset();
+              setTimeout(() => {
+                emailForm.style.display = 'none';
+              }, 3000);
+            } else {
+              toastEl.classList.remove('bg-success');
+              toastEl.classList.add('bg-danger');
+            }
+            toastBody.textContent = result.message;
+            toast.show();
+          } catch (error) {
+            toastEl.classList.remove('bg-success');
+            toastEl.classList.add('bg-danger');
+            toastBody.textContent = 'An unexpected error occurred. Please try again later.';
+            toast.show();
+          } finally {
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Send Message';
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- FAQ Structured Data (rich results) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What services do you offer?",
+        "acceptedAnswer":{"@type":"Answer","text":"Front-end development, responsive design, and basic UI/UX implementation for small business and personal sites."}
+      },
+      {
+        "@type":"Question",
+        "name":"How can I contact you?",
+        "acceptedAnswer":{"@type":"Answer","text":"Use the contact form on this page or email info@sametbozkurt.com.tr. WhatsApp is also available."}
+      },
+      {
+        "@type":"Question",
+        "name":"Where are you based?",
+        "acceptedAnswer":{"@type":"Answer","text":"I am based in Muğla, Turkey, and I work with clients remotely."}
+      }
+    ]
+  }
+  </script>
+
+  <!-- Tawk -->
+  <script type="text/javascript" defer>
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function() {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/68866dbcc99c121929b654ad/1j16hpapk';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-adsense-account" content="ca-pub-6088430077678432">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6088430077678432"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Veteran Software Architect</title>
+  <meta name="description" content="A showcase of major projects by a veteran software architect with 50 years of experience." />
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #0a0a0a;
+      --bg-card: #141414;
+      --text-primary: #f0f0f0;
+      --text-secondary: #a0a0a0;
+      --accent-primary: #00ddb3;
+      --accent-hover: #00ffc8;
+      --border-color: #262626;
+      --gradient: linear-gradient(90deg, #00ddb3 0%, #00aaff 100%);
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      background-color: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      animation: fadeInDown 1s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .navbar-brand {
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 700;
+      color: var(--accent-primary);
+      font-size: 2rem;
+      letter-spacing: 1px;
+      transition: color .3s;
+    }
+    .navbar-brand:hover { color: var(--accent-hover);}
+    .navbar-nav .nav-link {
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+      color: var(--accent-primary);
+    }
+    .nav-link-back {
+      color: #ff6b6b !important;
+      font-weight: 700;
+      font-style: italic;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 1100px;
+      margin: 3rem auto 5rem;
+      padding: 0 1rem;
+      width: 100%;
+    }
+    h1 {
+      font-size: 2.6rem;
+      color: var(--accent-primary);
+      text-align: center;
+      margin-bottom: 3rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+    .project-section {
+      margin-bottom: 3rem;
+    }
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 2rem 2rem 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 8px 32px rgba(0,221,179,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1.2s;
+      position: relative;
+    }
+    .project-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 16px 48px rgba(0,221,179,0.13);
+      border-color: var(--accent-primary);
+    }
+    .project-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      margin-bottom: 0.7rem;
+    }
+    .project-meta {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.7rem;
+    }
+    .project-description {
+      font-size: 1.13rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.2rem;
+    }
+    .project-tags {
+      margin-bottom: 0.7rem;
+    }
+    .project-tag {
+      display: inline-block;
+      background: var(--accent-primary);
+      color: #0a0a0a;
+      font-size: 0.93rem;
+      font-weight: 700;
+      border-radius: 6px;
+      padding: 0.2rem 0.7rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.03em;
+    }
+    .project-links a {
+      color: var(--accent-primary);
+      margin-right: 1.2rem;
+      font-size: 1.2rem;
+      transition: color 0.2s;
+      text-decoration: none;
+    }
+    .project-links a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+    .project-gallery {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .project-gallery img {
+      border-radius: 8px;
+      max-width: 180px;
+      max-height: 120px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 10px rgba(0,221,179,0.04);
+      transition: transform 0.2s;
+    }
+    .project-gallery img:hover {
+      transform: scale(1.07);
+      border-color: var(--accent-primary);
+    }
+    .partners {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin: 3rem 0;
+      animation: fadeInUp 1.2s;
+    }
+    .partner-logo {
+      height: 48px;
+      filter: grayscale(1) brightness(1.2);
+      opacity: 0.7;
+      transition: filter 0.3s, opacity 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+    .partner-logo:hover {
+      filter: none;
+      opacity: 1;
+      transform: scale(1.12) rotate(-2deg);
+    }
+    footer {
+      background-color: var(--bg-card);
+      border-top: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.95rem;
+      margin-top: 2rem;
+      animation: fadeInUp 1.2s;
+    }
+    footer a {
+      color: var(--accent-primary);
+      margin: 0 0.5rem;
+      font-size: 1.4rem;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: var(--accent-hover);
+    }
+    .footer-links a {
+      font-size: 1rem;
+      margin: 0 1rem;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 767px) {
+      main { margin: 1.5rem auto;}
+      .project-card { padding: 1.2rem 0.7rem;}
+      .project-gallery img { max-width: 100px; max-height: 70px;}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="joeindex.html">VeteranDev.</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+        <li class="nav-item"><a class="nav-link" href="joeindex.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="joeabout.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="joeprojects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="joecontact.html">Contact</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+          <a class="nav-link nav-link-back" href="catalog.html" title="Back to main portfolio projects">← Back to Portfolio</a>
+        </li>
+        <li class="nav-item dropdown ms-lg-3">
+          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Language
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item active" href="joeprojects.html">English</a></li>
+            <li><a class="dropdown-item" href="trjoeprojects.html">Türkçe</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <h1>Major Projects & Case Studies</h1>
+
+  <section class="project-section">
+    <div class="project-card">
+      <div class="project-title">Legacy Banking System Overhaul</div>
+      <div class="project-meta">2019–2021 &nbsp; | &nbsp; <span class="project-tag">Java</span> <span class="project-tag">Go</span> <span class="project-tag">Kubernetes</span></div>
+      <div class="project-description">
+        Re-architected a COBOL-based mainframe banking system into a secure microservice-based architecture using Go and Kubernetes. Reduced latency by 60% and enabled real-time audit capabilities. Led a team of 25 engineers, implemented CI/CD pipelines, and ensured zero downtime migration.
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/example/banking-microservices" target="_blank"><i class="fab fa-github"></i> Source</a>
+        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Case Study</a>
+      </div>
+      <div class="project-gallery">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Banking System Screenshot">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Microservices Diagram">
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Secure Health Data Platform</div>
+      <div class="project-meta">2017–2019 &nbsp; | &nbsp; <span class="project-tag">Python</span> <span class="project-tag">React</span> <span class="project-tag">AWS</span></div>
+      <div class="project-description">
+        Led a team to build a HIPAA-compliant data pipeline and visualization dashboard for a nationwide healthcare provider. Implemented encryption at rest and in transit using custom TLS solutions. Integrated with 20+ hospital systems and enabled real-time analytics for 10M+ records.
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/example/health-data-platform" target="_blank"><i class="fab fa-github"></i> Source</a>
+        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+      </div>
+      <div class="project-gallery">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Health Dashboard">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Data Pipeline">
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">AI-Powered Legacy Code Analyzer</div>
+      <div class="project-meta">2022 &nbsp; | &nbsp; <span class="project-tag">Java</span> <span class="project-tag">NLP</span> <span class="project-tag">Spring Boot</span></div>
+      <div class="project-description">
+        Designed and implemented a tool to scan legacy enterprise codebases and suggest modular refactoring opportunities using natural language processing and AST analysis. Used Java, OpenNLP, and Spring Boot. Helped reduce technical debt by 40% in pilot deployments.
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/example/legacy-code-analyzer" target="_blank"><i class="fab fa-github"></i> Source</a>
+      </div>
+      <div class="project-gallery">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Code Analyzer">
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Global Logistics Optimization Suite</div>
+      <div class="project-meta">2015–2017 &nbsp; | &nbsp; <span class="project-tag">C++</span> <span class="project-tag">Java</span> <span class="project-tag">Oracle</span></div>
+      <div class="project-description">
+        Developed a suite of optimization tools for a global logistics company, including route planning, real-time tracking, and predictive analytics. Improved delivery efficiency by 30% and reduced operational costs by $5M annually.
+      </div>
+      <div class="project-links">
+        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Whitepaper</a>
+      </div>
+      <div class="project-gallery">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Logistics Map">
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Open Source: Spring Boot Extensions</div>
+      <div class="project-meta">Ongoing &nbsp; | &nbsp; <span class="project-tag">Java</span> <span class="project-tag">Spring Boot</span> <span class="project-tag">Open Source</span></div>
+      <div class="project-description">
+        Maintainer and contributor to several Spring Boot starter projects and open-source extensions, including advanced security modules and cloud integrations. Projects have 2K+ stars on GitHub and are used by hundreds of companies worldwide.
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/example/spring-boot-extensions" target="_blank"><i class="fab fa-github"></i> Source</a>
+      </div>
+      <div class="project-gallery">
+        <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b41?auto=format&fit=crop&w=400&q=80" alt="Spring Boot">
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Cloud-Native ERP for Manufacturing</div>
+      <div class="project-meta">2012–2014 &nbsp; | &nbsp; <span class="project-tag">.NET</span> <span class="project-tag">Azure</span> <span class="project-tag">Microservices</span></div>
+      <div class="project-description">
+        Architected and delivered a cloud-native ERP system for a multinational manufacturer. Leveraged Azure, .NET Core, and Docker. Enabled real-time inventory, order management, and analytics for 50+ factories worldwide.
+      </div>
+      <div class="project-links">
+        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Case Study</a>
+      </div>
+      <div class="project-gallery">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="ERP Dashboard">
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="partners">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="partner-logo" alt="Microsoft">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="partner-logo" alt="Google">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/IBM_logo.svg" class="partner-logo" alt="IBM">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Oracle_logo.svg" class="partner-logo" alt="Oracle">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Amazon_Web_Services_Logo.svg" class="partner-logo" alt="AWS">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Accenture.svg" class="partner-logo" alt="Accenture">
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container text-center">
+    <div class="footer-links mb-3">
+      <a href="joeindex.html">Home</a> |
+      <a href="joeabout.html">About</a> |
+      <a href="joeprojects.html">Projects</a> |
+      <a href="joecontact.html">Contact</a>
+    </div>
+    <p class="mb-2">© <span id="copyright-year"></span> VeteranDev. All rights reserved.</p>
+    <p class="mb-3">
+      <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="ms-3"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" class="ms-3"><i class="fab fa-twitter"></i></a>
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+</body>

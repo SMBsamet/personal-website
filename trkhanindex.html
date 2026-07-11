@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta name="google-adsense-account" content="ca-pub-6088430077678432">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6088430077678432"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khan Market - Taze ve Kaliteli Ürünler</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+      :root {
+        --main-color: #27ae60;
+        --main-dark: #229954;
+        --secondary-color: #2c3e50;
+        --bg-light: #f8f9fa;
+        --card-bg: #ffffff;
+        --text-dark: #34495e;
+        --text-light: #7f8c8d;
+        --shadow: 0 6px 24px rgba(39, 174, 96, 0.08);
+        --shadow-hover: 0 12px 36px rgba(39, 174, 96, 0.15);
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--bg-light);
+        color: var(--text-dark);
+        scroll-behavior: smooth;
+      }
+
+      h1, h2, h3, h4, .navbar-brand {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: var(--secondary-color);
+      }
+      
+      .section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        color: var(--main-dark);
+        position: relative;
+        padding-bottom: 15px;
+        text-align: center;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--main-color);
+        border-radius: 2px;
+      }
+      
+      .hidden-page {
+        display: none;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: var(--card-bg) !important;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.07);
+        transition: all 0.3s ease;
+      }
+      .navbar.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+      .navbar-brand { color: var(--main-dark) !important; font-size: 1.8rem; }
+      .nav-link { font-weight: 500; font-size: 1rem; transition: color 0.2s; }
+      .nav-link.active, .nav-link:hover { color: var(--main-color) !important; }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+        color: white;
+        padding: 150px 0;
+        text-align: center;
+      }
+      .hero h1 { font-size: 3.5rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5); color: white;}
+      .hero p { font-size: 1.2rem; }
+
+      /* Buttons */
+      .btn-custom {
+        background: var(--main-color);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2);
+      }
+      .btn-custom:hover {
+        background: var(--main-dark);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+      }
+      
+      /* Product Card */
+      .product-card {
+        background: var(--card-bg);
+        border: 1px solid #f0f0f0;
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+      .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-hover);
+      }
+      .product-card img {
+        height: 220px; width: 100%; object-fit: cover; transition: transform 0.4s ease;
+      }
+      .product-card:hover img { transform: scale(1.1); }
+      .product-title { font-weight: 600; font-size: 1.15rem; }
+      .product-price { color: var(--main-color); font-weight: 700; font-size: 1.3rem; }
+      
+      /* Deals Section */
+      .deal-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        color: white;
+      }
+      .deal-card img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      .deal-card:hover img { transform: scale(1.1); }
+      .deal-overlay {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      #countdown { font-size: 1.5rem; font-weight: bold; background: rgba(255,255,255,0.2); backdrop-filter: blur(5px); padding: 10px; border-radius: 10px; }
+
+      /* About Section */
+      .about-icon {
+        font-size: 2rem;
+        color: var(--main-color);
+      }
+
+      /* Contact Section */
+      #contact-map {
+          height: 400px;
+          filter: grayscale(1);
+      }
+      
+      /* Checkout Page */
+      .order-summary {
+          background-color: var(--card-bg);
+          border-radius: 15px;
+          padding: 2rem;
+          box-shadow: var(--shadow);
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--secondary-color);
+        color: rgba(255,255,255,0.8);
+        padding: 60px 0 30px;
+      }
+      .footer h5 { color: #fff; font-family: 'Poppins', sans-serif; font-weight: 600;}
+      .footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s;}
+      .footer a:hover { color: #fff; }
+      
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><i class="fas fa-leaf me-2 text-success"></i>Khan Market</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Anasayfa</a></li>
+            <li class="nav-item"><a class="nav-link" href="#products">Ürünler</a></li>
+            <li class="nav-item"><a class="nav-link" href="#deals">Fırsatlar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">Hakkımızda</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link" id="cart-icon" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart">
+                <i class="fas fa-shopping-cart me-1"></i> Sepet
+                <span class="badge bg-danger ms-1" id="cart-count">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <i class="fas fa-user me-1"></i> Giriş Yap
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="shoppingCart">
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title">Alışveriş Sepetiniz</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="cart-items-container"></div>
+      </div>
+      <div class="offcanvas-footer p-3 border-top">
+        <div class="d-flex justify-content-between fs-5 fw-bold mb-3">
+          <span>Toplam:</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+        <button class="btn btn-custom w-100" id="checkout-btn">Siparişi Tamamla</button>
+      </div>
+    </div>
+    
+    <div id="main-content">
+      <main>
+        <section class="hero section" id="home">
+          <div class="container">
+            <h1 class="display-3">Doğallık Kapınızda</h1>
+            <p class="lead col-lg-8 mx-auto">En taze meyve, sebze ve organik ürünleri çiftlikten sofranıza en hızlı şekilde ulaştırıyoruz.</p>
+            <a href="#products" class="btn btn-custom btn-lg mt-3">Hemen Alışverişe Başla <i class="fas fa-arrow-right ms-2"></i></a>
+          </div>
+        </section>
+
+        <section id="products" class="section bg-white">
+          <div class="container">
+            <h2 class="section-title">Tüm Ürünler</h2>
+            <div class="d-flex flex-wrap gap-3 align-items-center mb-4">
+              <div class="flex-grow-1">
+                <input type="search" id="searchInput" class="form-control" placeholder="Ürün adı ile ara...">
+              </div>
+              <div class="btn-group">
+                <select id="sortOptions" class="form-select" style="min-width: 180px;">
+                  <option value="default">Varsayılan Sıralama</option>
+                  <option value="price-asc">Fiyat: Düşükten Yükseğe</option>
+                  <option value="price-desc">Fiyat: Yüksekten Düşüğe</option>
+                  <option value="name-asc">İsim: A-Z</option>
+                  <option value="name-desc">İsim: Z-A</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex gap-2 flex-wrap justify-content-center mb-5" id="categories-container"></div>
+            <div class="row g-4" id="product-list"></div>
+            <nav class="mt-5 d-flex justify-content-center">
+              <ul class="pagination" id="pagination-container"></ul>
+            </nav>
+          </div>
+        </section>
+
+        <!-- Haftanın Fırsatları Bölümü -->
+<section id="deals" class="section py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Haftanın Fırsatları</h2>
+    <div class="row g-4">
+      <!-- Deal 1 -->
+      <div class="col-lg-6">
+        <div class="deal-card position-relative overflow-hidden rounded shadow">
+          <img src="https://plus.unsplash.com/premium_photo-1675731118661-15dc54c11130?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+               alt="Yerli Çilek" class="w-100 h-100 object-fit-cover" style="aspect-ratio: 16/9;">
+          <div class="deal-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-white text-center p-4" style="background-color: rgba(0,0,0,0.5); transition: 0.3s;">
+            <h3 class="mb-2 fs-4 fw-bold">Yerli Çilekte %20 İndirim!</h3>
+            <p class="mb-3">Taptaze dağ çilekleri şimdi özel fiyata.</p>
+            <a href="#products" class="btn btn-light text-dark fw-semibold">İncele</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deal 2 -->
+      <div class="col-lg-6">
+        <div class="deal-card position-relative overflow-hidden rounded shadow">
+          <img src="https://images.unsplash.com/photo-1560781290-7dc94c0f8f4f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+               alt="Et Ürünleri" class="w-100 h-100 object-fit-cover" style="aspect-ratio: 16/9;">
+          <div class="deal-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-white text-center p-4" style="background-color: rgba(0,0,0,0.5); transition: 0.3s;">
+            <h3 class="mb-2 fs-4 fw-bold">Et Ürünlerinde Fırsat!</h3>
+            <p class="mb-2">Seçili et ürünlerinde ikinci ürün %50 indirimli.</p>
+            <div id="countdown" class="text-warning fw-bold mb-3">Süre: 00:12:45</div>
+            <a href="#products" class="btn btn-light text-dark fw-semibold">Kaçırma!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        
+        <section id="about" class="section bg-white">
+          <div class="container">
+            <h2 class="section-title">Biz Kimiz?</h2>
+            <div class="row align-items-center">
+              <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFya2V0fGVufDB8fDB8fHww" class="img-fluid rounded-3 shadow" alt="About Us">
+              </div>
+              <div class="col-lg-6">
+                <h3>Doğallığa Adanmış Bir Hikaye</h3>
+                <p class="text-muted">Khan Market, 2020 yılında Trabzon'un bereketli topraklarından ilham alarak kuruldu. Amacımız, en taze ve en doğal ürünleri, aracısız bir şekilde doğrudan çiftliklerden ve yerel üreticilerden temin ederek sofralarınıza ulaştırmaktır.</p>
+                <div class="row mt-4">
+                  <div class="col-md-6 mb-3">
+                    <h5><i class="fas fa-seedling about-icon me-2"></i> %100 Taze Ürünler</h5>
+                    <p>Ürünlerimiz günlük olarak toplanır ve tazeliğini koruyacak şekilde paketlenir.</p>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <h5><i class="fas fa-truck-fast about-icon me-2"></i> Hızlı ve Güvenilir Teslimat</h5>
+                    <p>Siparişleriniz aynı gün içinde özenle hazırlanır ve kapınıza kadar teslim edilir.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+       <section id="contact" class="section py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Bize Ulaşın</h2>
+    <div class="row g-4">
+      
+      <!-- İletişim Formu -->
+      <div class="col-lg-6">
+        <form id="contactForm" class="p-4 p-md-5 bg-white rounded-4 shadow-sm">
+          <p class="text-muted mb-4">Soru, görüş ve önerileriniz için formu doldurabilirsiniz.</p>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="contactName" placeholder="Adınız Soyadınız" required>
+            <label for="contactName">Adınız Soyadınız</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="contactEmail" placeholder="E-posta Adresiniz" required>
+            <label for="contactEmail">E-posta Adresiniz</label>
+          </div>
+
+          <div class="form-floating mb-4">
+            <textarea class="form-control" id="contactMessage" placeholder="Mesajınız" style="height: 120px;" required></textarea>
+            <label for="contactMessage">Mesajınız</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 fw-semibold">Gönder</button>
+        </form>
+      </div>
+
+      <!-- Harita -->
+      <div class="col-lg-6">
+    <div class="rounded-4 overflow-hidden shadow-sm h-100" style="min-height: 100%;">
+        <iframe 
+            src="https://maps.google.com/maps?q=Meydan%20Sokak%2C%20Ak%C3%A7aabat%2C%20Trabzon&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%" 
+            height="100%" 
+            style="border:0; min-height: 400px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+      
+
+    </div>
+  </div>
+</section>
+
+
+      </main>
+    </div>
+
+    <div id="checkout-page" class="hidden-page">
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Siparişi Tamamla</h2>
+                <div class="row g-5">
+                    <div class="col-lg-7">
+                        <h4>Teslimat Bilgileri</h4>
+                        <hr>
+                        <form class="needs-validation" id="checkout-form" novalidate>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="fullName" class="form-label">Ad Soyad</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                    <div class="invalid-feedback">Lütfen adınızı ve soyadınızı girin.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="phone" class="form-label">Telefon</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="5551234567" required>
+                                    <div class="invalid-feedback">Lütfen geçerli bir telefon numarası girin.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="address" class="form-label">Adres</label>
+                                    <textarea class="form-control" id="address" rows="3" required></textarea>
+                                    <div class="invalid-feedback">Lütfen teslimat adresinizi girin.</div>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <h4 class="mb-3">Ödeme Yöntemi</h4>
+                            <div class="my-3">
+                                <div class="form-check">
+                                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                                    <label class="form-check-label" for="credit">Kredi Kartı</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="cash" name="paymentMethod" type="radio" class="form-check-input" required>
+                                    <label class="form-check-label" for="cash">Kapıda Nakit Ödeme</label>
+                                </div>
+                            </div>
+                            <button class="w-100 btn btn-custom btn-lg" type="submit">Siparişi Onayla</button>
+                        </form>
+                        <a href="#" id="continue-shopping-link" class="d-block text-center mt-3">&larr; Alışverişe Devam Et</a>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="order-summary">
+                            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="text-success">Sipariş Özeti</span>
+                                <span class="badge bg-success rounded-pill" id="checkout-item-count">0</span>
+                            </h4>
+                            <ul class="list-group mb-3" id="checkout-summary-list">
+                                </ul>
+                            <div class="list-group-item d-flex justify-content-between">
+                                <span>Toplam (TL)</span>
+                                <strong id="checkout-total-price">0.00 TL</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h5><i class="fas fa-leaf me-2 text-success"></i>Khan Market</h5>
+            <p class="mt-3">En kaliteli ve taze ürünleri, güvenilir hizmet anlayışıyla kapınıza getiriyoruz.</p>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h5>Hızlı Linkler</h5>
+            <ul class="list-unstyled">
+              <li><a href="#home">Anasayfa</a></li>
+              <li><a href="#products">Ürünler</a></li>
+              <li><a href="#about">Hakkımızda</a></li>
+              <li><a href="#contact">İletişim</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-6">
+            <h5>Kategoriler</h5>
+            <ul class="list-unstyled" id="footer-categories"></ul>
+          </div>
+          <div class="col-lg-3">
+            <h5>Bize Ulaşın</h5>
+            <p><i class="fas fa-map-marker-alt me-2"></i> Söğütlü, 61300 Akçaabat/Trabzon</p>
+            <p><i class="fas fa-phone me-2"></i> +90 555 123 4567</p>
+            <p><i class="fas fa-envelope me-2"></i> destek@khanmarket.com</p>
+          </div>
+        </div>
+        <hr class="my-4" style="border-color: rgba(255,255,255,0.2);">
+        <p class="text-center mb-0">&copy; 2025 Khan Market. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+    
+    <div class="modal fade" id="productDetailModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" id="product-detail-content"></div>
+      </div>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header"><h5 class="modal-title">Giriş Yap veya Kayıt Ol</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body"><form><div class="mb-3"><label class="form-label">E-posta Adresi</label><input type="email" class="form-control"></div><div class="mb-3"><label class="form-label">Şifre</label><input type="password" class="form-control"></div><button type="submit" class="btn btn-custom w-100">Giriş Yap</button><p class="text-center my-3">veya</p><button type="button" class="btn btn-outline-secondary w-100">Yeni Hesap Oluştur</button></form></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="orderSuccessModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-4">
+                    <i class="fas fa-check-circle text-success fa-4x mb-3"></i>
+                    <h4 class="modal-title mb-3">Siparişiniz Alındı!</h4>
+                    <p>Siparişiniz başarıyla oluşturuldu. En kısa sürede hazırlayıp adresinize göndereceğiz.</p>
+                    <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Harika!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+    <div id="loading-spinner"><div class="spinner-border text-success" role="status" style="width: 3rem; height: 3rem;"><span class="visually-hidden">Yükleniyor...</span></div></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const state = {
+            products: [],
+            cart: JSON.parse(localStorage.getItem('khanMarketCart')) || [],
+            categories: [],
+            activeCategory: 'all',
+            searchTerm: '',
+            sortBy: 'default',
+            currentPage: 1,
+            itemsPerPage: 8,
+        };
+
+        // --- ELEMENT REFERANSLARI ---
+        const mainContentEl = document.getElementById('main-content');
+        const checkoutPageEl = document.getElementById('checkout-page');
+        const productListEl = document.getElementById('product-list');
+        const categoriesContainerEl = document.getElementById('categories-container');
+        const paginationContainerEl = document.getElementById('pagination-container');
+        const searchInputEl = document.getElementById('searchInput');
+        const sortOptionsEl = document.getElementById('sortOptions');
+        const cartCountEl = document.getElementById('cart-count');
+        const cartItemsContainerEl = document.getElementById('cart-items-container');
+        const cartTotalEl = document.getElementById('cart-total');
+        const spinnerEl = document.getElementById('loading-spinner');
+        const checkoutBtn = document.getElementById('checkout-btn');
+        const continueShoppingLink = document.getElementById('continue-shopping-link');
+        const checkoutForm = document.getElementById('checkout-form');
+        const contactForm = document.getElementById('contactForm');
+        
+       const productData = [
+  { id: 'p1', name: 'Organik Muz', desc: 'Ekvator\'dan ithal, tatlı ve besleyici muzlar.', price: 28.50, category: 'Meyve', image: 'https://images.unsplash.com/photo-1543218024-57a70143c369?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', stock: 50, rating: 4.8 },
+  { id: 'p2', name: 'Çengelköy Salatalık', desc: 'Yerli üretim, çıtır ve taze salatalıklar.', price: 18.90, category: 'Sebze', image: 'https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', stock: 120, rating: 4.7 },
+  { id: 'p3', name: 'Salkım Domates', desc: 'Tarlalardan sofranıza gelen sulu ve lezzetli domatesler.', price: 22.75, category: 'Sebze', image: 'https://images.unsplash.com/photo-1582284540020-8acbe03f4924?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG9tYXRvfGVufDB8fDB8fHww', stock: 80, rating: 4.9 },
+  { id: 'p4', name: 'Dana Antrikot (250gr)', desc: 'Özel çiftliklerden, dinlendirilmiş dana antrikot.', price: 180.00, category: 'Et & Balık', image: 'https://plus.unsplash.com/premium_photo-1668616816933-f3874102f54b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVhdHxlbnwwfHwwfHx8MA%3D%3D', stock: 25, rating: 5.0 },
+  { id: 'p5', name: 'Tam Buğday Ekmeği', desc: 'Ekşi mayalı, doyurucu ve sağlıklı tam buğday ekmeği.', price: 35.00, category: 'Fırın Ürünleri', image: 'https://images.unsplash.com/photo-1608198093002-ad4e005484ec?q=80&w=500&h=400&fit=crop', stock: 40, rating: 4.6 },
+  { id: 'p6', name: 'Organik Süt (1L)', desc: 'Günlük ve taze, pastörize edilmiş organik inek sütü.', price: 42.50, category: 'Süt & Süt Ürünleri', image: 'https://images.unsplash.com/photo-1634141510639-d691d86f47be?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1pbGt8ZW58MHx8MHx8fDA%3D', stock: 60, rating: 4.8 },
+  { id: 'p7', name: 'Taze Portakal Suyu', desc: 'Koruyucu içermez, C vitamini deposu portakal suyu.', price: 45.00, category: 'İçecekler', image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3JhbmdlJTIwanVpY2V8ZW58MHx8MHx8fDA%3D', stock: 30, rating: 4.9 },
+  { id: 'p8', name: 'Yerli Çilek (500gr)', desc: 'Aromatik ve tatlı, dağ çilekleri.', price: 65.00, category: 'Meyve', image: 'https://plus.unsplash.com/premium_photo-1689344314069-b60bf06d564c?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3Ryb3diZXJyeXxlbnwwfHwwfHx8MA%3D%3D', stock: 0, rating: 4.9 },
+  { id: 'p9', name: 'Ezine Peyniri (600gr)', desc: 'Tam yağlı, klasik Ezine peyniri.', price: 155.00, category: 'Süt & Süt Ürünleri', image: 'https://plus.unsplash.com/premium_photo-1691939610797-aba18030c15f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hlZXNlfGVufDB8fDB8fHww', stock: 55, rating: 4.8 },
+  { id: 'p10', name: 'Somon Füme (100gr)', desc: 'Norveç\'ten ithal, soğuk dumanlanmış somon füme.', price: 125.00, category: 'Et & Balık', image: 'https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNhbG1vbnxlbnwwfHwwfHx8MA%3D%3D', stock: 15, rating: 5.0 },
+  { id: 'p11', name: 'Kırmızı Kapya Biber', desc: 'Közlemelik ve dolmalık, etli ve tatlı biber.', price: 32.00, category: 'Sebze', image: 'https://images.unsplash.com/photo-1562318271-586b481d2021?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmVkJTIwcGVwcGVyfGVufDB8fDB8fHww', stock: 75, rating: 4.7 },
+  { id: 'p12', name: 'Tavuk Göğsü (500gr)', desc: 'Antibiyotiksiz, serbest gezen tavuk göğsü.', price: 95.50, category: 'Et & Balık', image: 'https://images.unsplash.com/photo-1682991136736-a2b44623eeba?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpY2tlbiUyMHJhd3xlbnwwfHwwfHx8MA%3D%3D', stock: 45, rating: 4.8 },
+  { id: 'p13', name: 'Organik Yumurta (10\'lu)', desc: 'Serbest gezen tavuklardan, besleyici organik yumurtalar.', price: 55.00, category: 'Süt & Süt Ürünleri', image: 'https://images.unsplash.com/photo-1498654077810-12c21d4d6dc3?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZWdnfGVufDB8fDB8fHww', stock: 90, rating: 4.9 },
+  { id: 'p14', name: 'Siyez Unlu Grissini', desc: 'Geleneksel yöntemlerle hazırlanmış, sağlıklı atıştırmalık.', price: 29.90, category: 'Fırın Ürünleri', image: 'https://images.unsplash.com/photo-1610725664285-7c57e6eeac3f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmxvdXJ8ZW58MHx8MHx8fDA%3D', stock: 35, rating: 4.5 },
+  { id: 'p15', name: 'Maden Suyu (6\'lı)', desc: 'Doğal mineralli, ferahlatıcı maden suyu.', price: 25.00, category: 'İçecekler', image: 'https://images.unsplash.com/photo-1566846128021-b940b0eec910?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c29kYXxlbnwwfHwwfHx8MA%3D%3D', stock: 150, rating: 4.8 },
+  { id: 'p16', name: 'Avokado', desc: 'Meksika\'dan ithal, kremsi ve besleyici avokado.', price: 48.00, category: 'Meyve', image: 'https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXZhY2Fkb3xlbnwwfHwwfHx8MA%3D%3D', stock: 40, rating: 4.9 },
+  { id: 'p17', name: 'Ispanak (Bağ)', desc: 'Demir deposu, taze ve yerli ıspanak.', price: 15.50, category: 'Sebze', image: 'https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BpbmFjaHxlbnwwfHwwfHx8MA%3D%3D', stock: 0, rating: 4.6 },
+  { id: 'p18', name: 'Süzme Yoğurt (500gr)', desc: 'Kıvamlı ve lezzetli, geleneksel süzme yoğurt.', price: 58.50, category: 'Süt & Süt Ürünleri', image: 'https://images.unsplash.com/photo-1564149503905-7fef56abc1f2?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8eW9ndXJ0fGVufDB8fDB8fHww', stock: 65, rating: 4.8 },
+  { id: 'p19', name: 'Levrek (Adet)', desc: 'Günlük denizden, taze ve lezzetli levrek.', price: 160.00, category: 'Et & Balık', image: 'https://images.unsplash.com/photo-1581866719960-e01b2d479c99?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNlYSUyMGJhc3N8ZW58MHx8MHx8fDA%3D', stock: 20, rating: 4.9 },
+  { id: 'p20', name: 'Cevizli Baklava (250gr)', desc: 'Gaziantep\'ten özel, bol cevizli ve şerbetli baklava.', price: 110.00, category: 'Fırın Ürünleri', image: 'https://images.unsplash.com/photo-1598110750624-207050c4f28c?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFrbGF2YXxlbnwwfHwwfHx8MA%3D%3D', stock: 30, rating: 5.0 }
+];
+
+    
+
+        // --- SAYFA YÖNLENDİRME (ROUTING) ---
+        const showPage = (pageId) => {
+            mainContentEl.classList.add('hidden-page');
+            checkoutPageEl.classList.add('hidden-page');
+            document.getElementById(pageId).classList.remove('hidden-page');
+            window.scrollTo(0, 0);
+        };
+        
+        // --- İLK YÜKLEME ---
+        const init = () => {
+            showSpinner();
+            setTimeout(() => {
+                state.products = productData;
+                state.categories = ['all', ...new Set(state.products.map(p => p.category))];
+                renderCategories();
+                render();
+                updateCartUI();
+                setupEventListeners();
+                startCountdown();
+                setupNavObserver();
+                hideSpinner();
+            }, 1000);
+        };
+        
+        // --- RENDER FONKSİYONLARI ---
+        const render = () => {
+            let prods = [...state.products];
+            if (state.activeCategory !== 'all') prods = prods.filter(p => p.category === state.activeCategory);
+            if (state.searchTerm) prods = prods.filter(p => p.name.toLowerCase().includes(state.searchTerm.toLowerCase()));
+            sortProducts(prods);
+            renderProducts(paginate(prods));
+            renderPagination(prods.length);
+        };
+        const renderProducts = (productsToRender) => {
+            productListEl.innerHTML = productsToRender.length === 0 
+                ? `<div class="col-12"><div class="alert alert-warning">Ürün bulunamadı.</div></div>`
+                : productsToRender.map(p => `
+                    <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+                        <div class="product-card h-100 w-100 d-flex flex-column" data-id="${p.id}">
+                            <img src="${p.image}" class="card-img-top" alt="${p.name}">
+                            <div class="card-body d-flex flex-column flex-grow-1">
+                                <span class="text-muted small">${p.category}</span>
+                                <h5 class="product-title mt-1">${p.name}</h5>
+                                <div class="mt-auto">
+                                    <p class="product-price mb-2">${p.price.toFixed(2)} TL</p>
+                                    <button class="btn btn-sm btn-outline-success w-100 btn-view-detail" data-id="${p.id}">İncele</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`).join('');
+        };
+        const renderCategories = () => {
+            categoriesContainerEl.innerHTML = state.categories.map(cat => `
+                <span class="category-chip ${state.activeCategory === cat ? 'active' : ''}" data-category="${cat}">
+                    ${cat === 'all' ? 'Tümü' : cat}
+                </span>`).join('');
+        };
+        const renderPagination = (totalItems) => {
+            const totalPages = Math.ceil(totalItems / state.itemsPerPage);
+            paginationContainerEl.innerHTML = totalPages <= 1 ? '' : Array.from({ length: totalPages }, (_, i) => `
+                <li class="page-item ${i + 1 === state.currentPage ? 'active' : ''}">
+                    <a class="page-link" href="#" data-page="${i + 1}">${i + 1}</a>
+                </li>`).join('');
+        };
+        
+        // --- SEPET & SİPARİŞ ARAYÜZÜ ---
+        const updateCartUI = () => {
+            renderCartItems();
+            renderCartTotal();
+            localStorage.setItem('khanMarketCart', JSON.stringify(state.cart));
+        };
+        const renderCartItems = () => {
+            cartItemsContainerEl.innerHTML = state.cart.length === 0 
+                ? '<p class="text-center text-muted">Sepetiniz boş.</p>'
+                : state.cart.map(item => {
+                    const product = findProductById(item.id);
+                    return `
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="${product.image}" alt="${product.name}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 5px;">
+                        <div class="ms-3 flex-grow-1"><h6 class="mb-0 small">${product.name}</h6><small class="text-muted">${item.quantity} x ${product.price.toFixed(2)} TL</small></div>
+                        <div><button class="btn btn-sm btn-outline-danger remove-from-cart" data-id="${item.id}">&times;</button></div>
+                    </div>`;
+                }).join('');
+        };
+        const renderCartTotal = () => {
+            const total = state.cart.reduce((sum, item) => sum + (findProductById(item.id).price * item.quantity), 0);
+            cartTotalEl.textContent = `${total.toFixed(2)} TL`;
+            cartCountEl.textContent = state.cart.reduce((sum, item) => sum + item.quantity, 0);
+        };
+        const renderCheckoutSummary = () => {
+            const summaryList = document.getElementById('checkout-summary-list');
+            const total = state.cart.reduce((sum, item) => sum + (findProductById(item.id).price * item.quantity), 0);
+            
+            summaryList.innerHTML = state.cart.map(item => {
+                const product = findProductById(item.id);
+                return `<li class="list-group-item d-flex justify-content-between lh-sm"><div><h6 class="my-0">${product.name}</h6><small class="text-muted">Adet: ${item.quantity}</small></div><span class="text-muted">${(product.price * item.quantity).toFixed(2)} TL</span></li>`;
+            }).join('');
+            
+            document.getElementById('checkout-item-count').textContent = state.cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('checkout-total-price').textContent = `${total.toFixed(2)} TL`;
+        };
+        
+        // --- YARDIMCI FONKSİYONLAR ---
+        const showSpinner = () => spinnerEl.style.display = 'flex';
+        const hideSpinner = () => spinnerEl.style.display = 'none';
+        const findProductById = (id) => state.products.find(p => p.id === id);
+        const sortProducts = (prods) => {
+            const SORTS = {
+                'price-asc': (a, b) => a.price - b.price,
+                'price-desc': (a, b) => b.price - a.price,
+                'name-asc': (a, b) => a.name.localeCompare(b.name),
+                'name-desc': (a, b) => b.name.localeCompare(a.name),
+            };
+            if (SORTS[state.sortBy]) prods.sort(SORTS[state.sortBy]);
+        };
+        const paginate = (items) => items.slice((state.currentPage - 1) * state.itemsPerPage, state.currentPage * state.itemsPerPage);
+        const showToast = (message, type = 'success') => {
+            const toastEl = document.createElement('div');
+            toastEl.className = `toast align-items-center text-white bg-${type} border-0`;
+            toastEl.innerHTML = `<div class="d-flex"><div class="toast-body">${message}</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>`;
+            document.querySelector('.toast-container').appendChild(toastEl);
+            new bootstrap.Toast(toastEl).show();
+        };
+
+        // --- SEPET İŞLEVLERİ ---
+        const addToCart = (productId) => {
+            const existingItem = state.cart.find(item => item.id === productId);
+            existingItem ? existingItem.quantity++ : state.cart.push({ id: productId, quantity: 1 });
+            updateCartUI();
+            showToast(`<strong>${findProductById(productId).name}</strong> sepete eklendi!`);
+        };
+        
+        // --- MODAL İŞLEVLERİ ---
+        const showProductDetailModal = (productId) => {
+            const product = findProductById(productId);
+            document.getElementById('product-detail-content').innerHTML = `
+                <div class="modal-header"><h5 class="modal-title">${product.name}</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body"><div class="row"><div class="col-md-6"><img src="${product.image}" alt="${product.name}" class="img-fluid rounded"></div><div class="col-md-6"><span class="badge bg-success mb-2">${product.category}</span><p>${product.desc}</p><p><strong>Puan:</strong> ${product.rating.toFixed(1)}/5.0 <i class="fas fa-star text-warning"></i></p><h3 class="product-price my-3">${product.price.toFixed(2)} TL</h3><button class="btn btn-custom btn-lg w-100 btn-add-to-cart" data-id="${product.id}" ${product.stock === 0 ? 'disabled' : ''}>${product.stock > 0 ? '<i class="fas fa-cart-plus me-2"></i>Sepete Ekle' : 'Stokta Yok'}</button></div></div></div>`;
+            new bootstrap.Modal(document.getElementById('productDetailModal')).show();
+        };
+
+        // --- DİĞER İŞLEVLER ---
+        const startCountdown = () => {
+            const countDownDate = new Date().getTime() + (2 * 24 * 60 * 60 * 1000); // 2 gün sonrası
+            setInterval(() => {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("countdown").innerHTML = `${days}g ${hours}s ${minutes}d ${seconds}s`;
+            }, 1000);
+        };
+        const setupNavObserver = () => {
+            const sections = document.querySelectorAll('.section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { rootMargin: "-50% 0px -50% 0px" });
+            sections.forEach(section => observer.observe(section));
+        };
+
+        // --- EVENT LISTENERS ---
+        const setupEventListeners = () => {
+            searchInputEl.addEventListener('input', (e) => { state.searchTerm = e.target.value; state.currentPage = 1; render(); });
+            sortOptionsEl.addEventListener('change', (e) => { state.sortBy = e.target.value; render(); });
+            categoriesContainerEl.addEventListener('click', (e) => {
+                if (e.target.matches('.category-chip')) {
+                    state.activeCategory = e.target.dataset.category;
+                    state.currentPage = 1;
+                    document.querySelector('.category-chip.active').classList.remove('active');
+                    e.target.classList.add('active');
+                    render();
+                }
+            });
+            paginationContainerEl.addEventListener('click', (e) => {
+                if (e.target.matches('.page-link')) {
+                    e.preventDefault();
+                    state.currentPage = parseInt(e.target.dataset.page);
+                    render();
+                    document.getElementById('products').scrollIntoView();
+                }
+            });
+            document.body.addEventListener('click', (e) => {
+                if (e.target.matches('.btn-add-to-cart')) { addToCart(e.target.dataset.id); }
+                if (e.target.matches('.btn-view-detail')) { showProductDetailModal(e.target.dataset.id); }
+                if (e.target.matches('.remove-from-cart')) {
+                    state.cart = state.cart.filter(item => item.id !== e.target.dataset.id);
+                    updateCartUI();
+                }
+            });
+            checkoutBtn.addEventListener('click', () => {
+                if (state.cart.length > 0) {
+                    bootstrap.Offcanvas.getInstance(document.getElementById('shoppingCart')).hide();
+                    renderCheckoutSummary();
+                    showPage('checkout-page');
+                } else {
+                    showToast('Sipariş vermek için sepetinize ürün eklemelisiniz.', 'warning');
+                }
+            });
+            continueShoppingLink.addEventListener('click', (e) => { e.preventDefault(); showPage('main-content'); });
+            checkoutForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (checkoutForm.checkValidity()) {
+                    new bootstrap.Modal(document.getElementById('orderSuccessModal')).show();
+                    state.cart = [];
+                    updateCartUI();
+                    checkoutForm.reset();
+                    checkoutForm.classList.remove('was-validated');
+                    showPage('main-content');
+                } else {
+                    checkoutForm.classList.add('was-validated');
+                }
+            });
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                showToast('Mesajınız başarıyla gönderildi!', 'info');
+                contactForm.reset();
+            });
+        };
+
+        init();
+    });
+    </script>
+</body>
+</html>

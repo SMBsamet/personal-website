@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="tr" class="no-js" data-theme="light">
+
+<head>
+  <meta name="google-adsense-account" content="ca-pub-6088430077678432">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6088430077678432"
+     crossorigin="anonymous"></script>
+  <title>Samet Bozkurt | Bilgisayar Mühendisi & Yazılım Geliştirici</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Samet Bozkurt'un resmi portfolyosu. Bilgisayar mühendisliği projelerini, yazılım geliştirme deneyimini, blog yazılarını ve iletişim bilgilerini keşfedin.">
+  <meta name="google-site-verification" content="IszycLLpZp5D8UDjfVkapTSP5uksdy5bf8d4aDN1LsA" />
+
+  <meta property="og:title" content="Samet Bozkurt | Bilgisayar Mühendisi & Yazılım Geliştirici" />
+  <meta property="og:description" content="Bilgisayar mühendisliği projelerini, yazılım geliştirme deneyimini ve iletişim bilgilerini keşfedin." />
+  <meta property="og:image" content="https://sametbozkurt.com.tr/Pictures/logo.png" /> <meta property="og:url" content="https://sametbozkurt.com.tr/trindex.html" /> <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Samet Bozkurt | Bilgisayar Mühendisi & Yazılım Geliştirici" />
+  <meta name="twitter:description" content="Bilgisayar mühendisliği projelerini, yazılım geliştirme deneyimini ve iletişim bilgilerini keşfedin." />
+  <meta name="twitter:image" content="https://sametbozkurt.com.tr/Pictures/logo.png" /> <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://images.pexels.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon/apple-icon-180x180.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      background: #f8f9fa;
+    }
+
+    .section-heading {
+      margin-bottom: 4rem;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .section-heading::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: #0d6efd;
+      border-radius: 2px;
+    }
+
+    .navbar-brand {
+      font-weight: bolder;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      user-select: none;
+    }
+
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 80px;
+      padding-bottom: 40px;
+    }
+
+    .typed-text {
+      color: #EA4C89;
+    }
+
+    .hero-tech-keywords {
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+
+    .tech-keyword {
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .tech-keyword:hover,
+    .tech-keyword.active {
+      color: #fd7e14;
+    }
+
+    .hero-tech-keywords .separator {
+      color: rgba(255, 255, 255, 0.5);
+      margin: 0 10px;
+      font-weight: 300;
+      cursor: default;
+    }
+
+    #hero-explanation-box {
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+      color: #f0f0f0;
+      border-radius: 8px;
+      padding: 0 20px;
+      margin-top: 20px;
+      max-width: 600px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out, opacity 0.5s ease-out, padding 0.5s ease-out;
+    }
+
+    #hero-explanation-box.show {
+      padding: 20px;
+      max-height: 200px;
+      opacity: 1;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      z-index: 1030;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe57;
+      transform: scale(1.1);
+      color: white;
+    }
+
+    section {
+      padding: 80px 15px;
+    }
+
+    #about,
+    #contact,
+    #services {
+      background-color: #ffffff;
+    }
+
+    .project-card,
+    .service-card,
+    .testimonial-card {
+      height: 100%;
+    }
+
+    .project-card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-card .card-img-top {
+      border-bottom: 1px solid #eee;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-card .tech-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.3rem 0.6rem;
+    }
+
+    .project-card .btn-project {
+      border-radius: 50px;
+      font-weight: 600;
+      padding: 0.5rem 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+      border: 1px solid #e9ecef;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card .icon {
+      font-size: 3rem;
+      color: #0d6efd;
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-category {
+      margin-bottom: 2.5rem;
+    }
+
+    .skill-category h4 {
+      margin-bottom: 1.5rem;
+      color: #343a40;
+      font-weight: 600;
+    }
+
+    .skill-item {
+      display: inline-flex;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 10px 20px;
+      margin: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-color: #0d6efd;
+    }
+
+    .skill-item i {
+      font-size: 1.5rem;
+      margin-right: 12px;
+      color: #0d6efd;
+    }
+
+    .skill-item span {
+      font-weight: 500;
+    }
+
+    .skill-item.passive {
+      background-color: #f8f9fa;
+      border-color: #e9ecef;
+      box-shadow: none;
+    }
+
+    .skill-item.passive i,
+    .skill-item.passive span {
+      color: #adb5bd !important;
+    }
+
+    .skill-item.passive:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: #e9ecef;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border-left: 5px solid #0d6efd;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+      text-align: left;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: #555;
+    }
+
+    .testimonial-card .testimonial-author {
+      font-weight: 700;
+      color: #000;
+      margin-top: 1rem;
+    }
+
+    .testimonial-card .testimonial-author span {
+      font-weight: 400;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    #contact .form-control,
+    #contact button {
+      border-radius: 0.5rem;
+    }
+
+    .contact-btn {
+      background-color: #0d6efd;
+      color: white;
+      border-radius: 50px;
+      padding: 12px 30px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+
+    .contact-btn:hover {
+      background-color: #0a58ca;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(13, 110, 253, 0.6);
+      color: white;
+    }
+
+    .contact-btn i {
+      pointer-events: none;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 40px 15px;
+    }
+
+    footer a {
+      color: #ccc;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+
+    .footer-link {
+      text-decoration: none;
+    }
+
+    .footer-icon {
+      font-size: 1.5rem;
+      margin: 0 12px;
+    }
+
+    .stats-section {
+      background-color: #343a40;
+      padding: 80px 15px;
+    }
+
+    .stat-item .stat-number {
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: #fd7e14;
+      line-height: 1.2;
+    }
+
+    .stat-item .stat-text {
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #f8f9fa;
+      margin-top: 10px;
+    }
+
+    .markets-section {
+      background-color: #222;
+      color: #f8f9fa;
+    }
+
+    .navbar-brand img {
+      height: 50px;
+      width: auto;
+    }
+
+    .navbar.sticky-top {
+      padding-top: 0.01rem;
+      padding-bottom: 0.5rem;
+      transition: padding 0.3s ease;
+    }
+
+    @media (max-width: 991px) {
+      .navbar-nav {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+    .hero-video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 34, 56, 0.7); 
+    z-index: 0; 
+}
+
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="trindex.html">
+        <img src="Pictures/logo.png" alt="Samet Bozkurt Logosu" width="161" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Navigasyonu aç/kapat">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="trindex.html">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="trabout.html">Hakkımda</a></li>
+          <li class="nav-item"><a class="nav-link" href="trcatalog.html">Katalog</a></li>
+          <li class="nav-item"><a class="nav-link" href="trprojects.html">Projeler</a></li>
+          <li class="nav-item"><a class="nav-link" href="trcontact.html">İletişim</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dil
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item" href="index.html">English</a></li>
+              <li><a class="dropdown-item active" href="trindex.html">Türkçe</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <a href="https://wa.me/905555555555" target="_blank" class="whatsapp-float" aria-label="WhatsApp üzerinden İletişime Geçin">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <header id="home" class="text-center hero-section text-white">
+    <video autoplay loop muted playsinline poster="Pictures/video-posteri.jpg" class="hero-video-background">
+        <source src="Pictures/background-video.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+    </video>
+
+    <div class="container" style="position: relative; z-index: 1;">
+        <h1 class="display-3 fw-bold mb-3" data-aos="fade-down">
+            <span class="typed-text"></span> Web Siteleri İnşa Ediyorum
+        </h1>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">
+            Etkileyen ve dönüştüren dijital deneyimler yaratıyorum.
+        </p>
+        <a href="#about" class="btn btn-primary btn-lg px-5 py-3 mb-4" data-aos="fade-up" data-aos-delay="400">Daha Fazla Bilgi</a>
+
+        <div class="hero-tech-keywords" data-aos="fade-up" data-aos-delay="600">
+            <span class="tech-keyword"
+                data-explanation="Web sayfalarının yapısını oluşturmak için kullanılan temel dildir.">HTML5</span>
+            <span class="separator">|</span>
+            <span class="tech-keyword"
+                data-explanation="Web sayfalarını biçimlendirmek ve düzenlemek için kullanılır; örneğin, yazı tipi, renk, boyut ve boşlukları değiştirmek için.">CSS3</span>
+            <span class="separator">|</span>
+            <span class="tech-keyword"
+                data-explanation="Dinamik olarak güncellenen içerik oluşturmanızı ve görüntüleri canlandırmanızı sağlayan bir programlama dilidir.">JavaScript</span>
+            <span class="separator">|</span>
+            <span class="tech-keyword"
+                data-explanation="Bir ürünün kullanılabilirliğini ve erişilebilirliğini artırarak kullanıcı memnuniyetini iyileştirme sürecidir.">UI/UX
+                Tasarım</span>
+        </div>
+        <div id="hero-explanation-box"></div>
+    </div>
+</header>
+
+  <section id="about" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center section-heading">Hakkımda</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <p class="lead"> Merhaba! Ben Samet Bozkurt, Türkiye'de yaşayan tutkulu bir Bilgisayar Mühendisliği öğrencisi ve yazılım geliştiricisiyim. Fark yaratan yenilikçi yazılım çözümleri tasarlama ve inşa etme konusunda büyük bir ilgiye sahibim. </p>
+          <p> Programlama, algoritmalar ve sistem tasarımı konularında sağlam bir temelle, zorlu problemleri çözmekten ve fikirleri gerçeğe dönüştürmekten keyif alıyorum. Sürekli olarak becerilerimi geliştirmeye ve sektör trendlerini takip etmeye çalışıyorum. </p>
+          <p> Çalışmalarımı keşfetmekten ve tartışmak istediğiniz fırsatlar veya fikirleriniz varsa benimle iletişime geçmekten çekinmeyin!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center section-heading">İlgi Alanlarım</h2>
+      <div class="row gy-4 text-center">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="service-card">
+            <div class="icon"><i class="fas fa-code"></i></div>
+            <h4 class="fw-bold">Front-End Geliştirme</h4>
+            <p class="text-muted">HTML, CSS ve JavaScript'in temellerini öğreniyor, web için kullanıcı arayüzleri oluşturma pratiği yapıyorum.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="service-card">
+            <div class="icon"><i class="fas fa-palette"></i></div>
+            <h4 class="fw-bold">UI/UX Tasarımı</h4>
+            <p class="text-muted">Kullanıcı dostu ve estetik tasarım ilkelerini keşfediyor, temiz ve modern arayüzler hakkında bilgi ediniyorum.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="service-card">
+            <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+            <h4 class="fw-bold">Duyarlı Web Tasarımı</h4>
+            <p class="text-muted">Web sitelerinin farklı cihazlarda harika görünmesini sağlamak için duyarlı tasarım tekniklerini uygulayarak becerilerimi geliştiriyorum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center section-heading">Öne Çıkan Projelerim</h2>
+      <div class="row gy-5 justify-content-center">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card project-card w-100">
+             <img src="https://images.pexels.com/photos/7735630/pexels-photo-7735630.jpeg" class="card-img-top" alt="Kişisel Portfolyo Projesi" loading="lazy" width="400" height="267">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Kişisel Portfolyo</h5>
+              <p class="card-text small flex-grow-1">Yeteneklerimi ve projelerimi sergilemek için duyarlı ve modern bir kişisel portfolyo web sitesi.</p>
+              <div class="mb-3"> <span class="badge rounded-pill text-bg-primary tech-badge">HTML5</span> <span
+                  class="badge rounded-pill text-bg-secondary tech-badge">CSS3</span> <span
+                  class="badge rounded-pill text-bg-success tech-badge">Bootstrap</span> <spanf
+                  class="badge rounded-pill text-bg-warning tech-badge">JavaScript</span> </div>
+              <div class="mt-auto d-flex gap-2"> <a href="trjoeindex.html" class="btn btn-primary btn-project w-100">Canlı
+                  Demo</a> <a href="https://github.com" class="btn btn-outline-secondary btn-project w-100"><i
+                    class="fab fa-github"></i> Kod</a> </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card project-card w-100">
+             <img src="https://images.unsplash.com/photo-1508928807352-24a4adbb6795?q=80&w=1170&auto=format&fit=crop" class="card-img-top" alt="Yerel Market Projesi" loading="lazy" width="400" height="267">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Yerel Market Sitesi</h5>
+              <p class="card-text small flex-grow-1">Yerel bir market için ürün katalogları ve alışveriş sepeti içeren bir e-ticaret platformu.</p>
+              <div class="mb-3"> <span class="badge rounded-pill text-bg-primary tech-badge">HTML5</span> <span
+                  class="badge rounded-pill text-bg-secondary tech-badge">CSS3</span> <span
+                  class="badge rounded-pill text-bg-success tech-badge">Bootstrap</span> <span
+                  class="badge rounded-pill text-bg-warning tech-badge">JavaScript</span> </div>
+              <div class="mt-auto d-flex gap-2"> <a href="trkhanindex.html" class="btn btn-primary btn-project w-100">Canlı
+                  Demo</a> <a href="https://github.com" class="btn btn-outline-secondary btn-project w-100"><i
+                    class="fab fa-github"></i> Kod</a> </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card project-card w-100">
+             <img src="https://images.pexels.com/photos/4057663/pexels-photo-4057663.jpeg" class="card-img-top" alt="Haber Portalı Projesi" loading="lazy" width="400" height="267">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">Haber Portalı</h5>
+              <p class="card-text small flex-grow-1">Kategoriler, makaleler ve bir içerik yönetim sistemi içeren dinamik bir haber portalı web sitesi.</p>
+              <div class="mb-3"> <span class="badge rounded-pill text-bg-primary tech-badge">HTML5</span> <span
+                  class="badge rounded-pill text-bg-secondary tech-badge">CSS3</span> <span
+                  class="badge rounded-pill text-bg-success tech-badge">Bootstrap</span> <span
+                  class="badge rounded-pill text-bg-warning tech-badge">JavaScript</span> </div>
+              <div class="mt-auto d-flex gap-2"> <a href="trnewsindex.html" class="btn btn-primary btn-project w-100">Canlı
+                  Demo</a> <a href="https://github.com" class="btn btn-outline-secondary btn-project w-100"><i
+                    class="fab fa-github"></i> Kod</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-5">
+    <div class="container text-center" data-aos="fade-up">
+      <h2 class="section-heading">Teknoloji Yetkinliklerim</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="skill-category">
+            <h4>Diller</h4>
+            <div class="d-flex justify-content-center flex-wrap">
+              <div class="skill-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+              <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+              <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+              <div class="skill-item passive"><i class="fab fa-python"></i><span>Python</span></div>
+              <div class="skill-item passive"><i class="fab fa-java"></i><span>Java</span></div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4>Frameworkler & Kütüphaneler</h4>
+            <div class="d-flex justify-content-center flex-wrap">
+              <div class="skill-item"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
+              <div class="skill-item passive"><i class="fab fa-react"></i><span>React</span></div>
+              <div class="skill-item passive"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+              <div class="skill-item passive"><span>Django</span></div>
+              <div class="skill-item passive"><span>Spring Boot</span></div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4>Araçlar & Platformlar</h4>
+            <div class="d-flex justify-content-center flex-wrap">
+              <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git & GitHub</span></div>
+              <div class="skill-item passive"><i class="fab fa-docker"></i><span>Docker</span></div>
+              <div class="skill-item passive"><i class="fas fa-database"></i><span>SQL & NoSQL</span></div>
+              <div class="skill-item passive"><span>Postman</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats" class="stats-section" data-aos="fade-up">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <div class="stat-item">
+            <div class="stat-number"><span class="count-up" data-target="99">0</span>%</div>
+            <p class="stat-text">Müşteri Memnuniyeti</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <div class="stat-item">
+            <div class="stat-number"><span class="count-up" data-target="3">0</span>+</div>
+            <p class="stat-text">Tamamlanan Proje</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="stat-item">
+            <div class="stat-number"><span class="count-up" data-target="10">0</span>+</div>
+            <p class="stat-text">Çözülen Problem</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stat-item">
+            <div class="stat-number"><span class="count-up" data-target="3">0</span>+</div>
+            <p class="stat-text">Mutlu Müşteri</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center section-heading">İletişime Geçin</h2>
+      <div class="d-flex justify-content-center flex-wrap gap-3 mb-5">
+        <button id="btnEmail" class="contact-btn d-flex align-items-center gap-2">
+          <i class="fas fa-envelope fa-lg"></i> E-posta Gönder
+        </button>
+        <a href="https://wa.me/905555555555" target="_blank" class="contact-btn d-flex align-items-center gap-2">
+          <i class="fab fa-whatsapp fa-lg"></i> WhatsApp
+        </a>
+        <a href="https://instagram.com/" target="_blank" class="contact-btn d-flex align-items-center gap-2">
+          <i class="fab fa-instagram fa-lg"></i> Instagram
+        </a>
+      </div>
+      <div id="emailForm" style="display:none; max-width: 600px; margin: 0 auto;" data-aos="fade-down"
+        data-aos-duration="500">
+        <form id="contactForm" novalidate>
+          <div class="mb-3">
+            <label for="nameContact" class="form-label">Adınız</label>
+            <input type="text" class="form-control" id="nameContact" name="name" placeholder="Adınızı giriniz"
+              required />
+          </div>
+          <div class="mb-3">
+            <label for="emailContact" class="form-label">E-posta Adresiniz</label>
+            <input type="email" class="form-control" id="emailContact" name="email"
+              placeholder="E-posta adresinizi giriniz" required />
+          </div>
+          <div class="mb-3">
+            <label for="messageContact" class="form-label">Mesajınız</label>
+            <textarea class="form-control" id="messageContact" name="message" rows="5"
+              placeholder="Mesajınızı buraya yazınız" required></textarea>
+          </div>
+          <input type="hidden" name="lang" value="tr" />
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-5 py-2">Mesaj Gönder</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11" aria-live="polite" aria-atomic="true">
+    <div id="liveToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="toast-body"></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Kapat"></button>
+      </div>
+    </div>
+  </div>
+
+  <section id="testimonials" class="bg-light py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center section-heading">Referanslar</h2>
+      <div class="row gy-4 justify-content-center">
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="testimonial-card">
+            <p>"Samet, marketimiz için sade ve etkili bir web sitesi tasarladı. Müşterilerimiz kullanımı çok kolay buluyor ve online siparişlerimiz arttı. Yetenekli ve güvenilir bir genç."</p>
+            <div class="testimonial-author"> Hasan Yılmaz⭐⭐⭐⭐⭐ <span>- Yılmaz Market Sahibi</span> </div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="testimonial-card">
+            <p>"Yerel dükkanımız için modern bir görünüme ihtiyacımız vardı ve Samet tam da bunu sağladı. İhtiyaçlarımızı dinledi ve ürünlerimiz için harika bir vitrin oluşturdu. Çalışmasından çok memnunuz."</p>
+            <div class="testimonial-author"> Fatma Öztürk⭐⭐⭐⭐⭐ <span>- Öztürk Butik Sahibi</span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container py-4 text-light">
+      <div class="row gy-4 text-center text-md-start">
+        <div class="col-md-4">
+          <h5 class="mb-3 text-white">Samet Bozkurt</h5>
+          <p> Tutkulu bir bilgisayar mühendisliği öğrencisi ve yazılım geliştirici. Öğrenmeye, üretmeye ve etkili projelere katkıda bulunmaya hevesli. </p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="mb-3 text-white">Hızlı Bağlantılar</h5>
+          <ul class="list-unstyled">
+            <li><a href="#about" class="footer-link">Hakkımda</a></li>
+            <li><a href="#services" class="footer-link">İlgi Alanlarım</a></li>
+            <li><a href="#projects" class="footer-link">Projeler</a></li>
+            <li><a href="#contact" class="footer-link">İletişim</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="mb-3 text-white">İletişim Bilgileri</h5>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>Muğla, Türkiye</li>
+            <li><i class="fas fa-envelope me-2"></i><a href="mailto:info@sametbozkurt.com.tr"
+                class="footer-link">info@sametbozkurt.com.tr</a></li>
+            <li><i class="fas fa-phone me-2"></i><a href="tel:+905555555555" class="footer-link">+90 555 555 55 55</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center social-icons mt-4">
+        <a href="https://instagram.com/" target="_blank" aria-label="Instagram sayfamızı ziyaret edin" class="footer-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/" target="_blank" aria-label="GitHub profilimizi ziyaret edin" class="footer-icon"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/" target="_blank" aria-label="X (Twitter) profilimizi ziyaret edin" class="footer-icon"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://wa.me/905555555555" target="_blank" aria-label="WhatsApp üzerinden bize ulaşın" class="footer-icon"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <hr class="my-4" style="border-color: #444;" />
+      <p class="text-center small mb-0">&copy; 2025 Samet Bozkurt. Tüm Hakları Saklıdır.</p>
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // AOS (kaydırarak animasyon)
+      AOS.init({ duration: 800, once: true, offset: 50 });
+      
+     
+      // Typed.js (yazı efekti)
+      new Typed('.typed-text', {
+        strings: ['Dinamik', 'Hızlı', 'Duyarlı', 'Modern', 'Güvenli'],
+        typeSpeed: 70,
+        backSpeed: 40,
+        loop: true,
+        smartBackspace: true
+      });
+
+      // Teknoloji kelimeleri açıklama kutusu
+      const techKeywords = document.querySelectorAll('.tech-keyword');
+      const explanationBox = document.getElementById('hero-explanation-box');
+
+      techKeywords.forEach(keyword => {
+        keyword.addEventListener('click', function () {
+          const explanation = this.getAttribute('data-explanation');
+          const isActive = this.classList.contains('active');
+          techKeywords.forEach(kw => kw.classList.remove('active'));
+          if (isActive) {
+            explanationBox.classList.remove('show');
+            explanationBox.textContent = '';
+          } else {
+            this.classList.add('active');
+            explanationBox.textContent = explanation;
+            explanationBox.classList.add('show');
+          }
+        });
+      });
+
+      // Sayaçlar
+      const animateCountUp = (el) => {
+        const target = +el.getAttribute('data-target');
+        let count = 0;
+        const duration = 2000;
+        if (target === 0) {
+          el.textContent = 0;
+          return;
+        }
+        const stepTime = Math.max(1, Math.floor(duration / target));
+        const timer = setInterval(() => {
+          count++;
+          el.textContent = count;
+          if (count >= target) {
+              el.textContent = target; // Tam hedefte bittiğinden emin ol
+              clearInterval(timer);
+          }
+        }, stepTime);
+      };
+
+      const statsSection = document.querySelector('#stats');
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            document.querySelectorAll('.count-up').forEach(el => animateCountUp(el));
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      if (statsSection) {
+          observer.observe(statsSection);
+      }
+      
+      // Formu aç/kapat
+      const btnEmail = document.getElementById('btnEmail');
+      const emailForm = document.getElementById('emailForm');
+      btnEmail.addEventListener('click', () => {
+        const isHidden = emailForm.style.display === 'none' || emailForm.style.display === '';
+        emailForm.style.display = isHidden ? 'block' : 'none';
+        if (isHidden) {
+          setTimeout(() => {
+            emailForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 100);
+        }
+      });
+
+      // Form gönderme
+      const contactForm = document.getElementById('contactForm');
+      const toastEl = document.getElementById('liveToast');
+      const toastBody = document.getElementById('toast-body');
+      const toast = new bootstrap.Toast(toastEl, { delay: 3500 });
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', async function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(contactForm);
+          const submitButton = contactForm.querySelector('button[type="submit"]');
+
+          submitButton.disabled = true;
+          submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Gönderiliyor...';
+
+          try {
+            const response = await fetch('send_mail.php', {
+              method: 'POST',
+              body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.status === 'success') {
+              toastEl.classList.remove('bg-danger');
+              toastEl.classList.add('bg-success');
+              contactForm.reset();
+              setTimeout(() => {
+                emailForm.style.display = 'none';
+              }, 3000);
+            } else {
+              toastEl.classList.remove('bg-success');
+              toastEl.classList.add('bg-danger');
+            }
+
+            toastBody.textContent = result.message;
+            toast.show();
+
+          } catch (error) {
+            toastEl.classList.remove('bg-success');
+            toastEl.classList.add('bg-danger');
+            toastBody.textContent = 'Beklenmedik bir hata oluştu. Lütfen daha sonra tekrar deneyin.';
+            toast.show();
+          } finally {
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Mesaj Gönder';
+          }
+        });
+      }
+    });
+  </script>
+  <script type="text/javascript" defer>
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/68866dbcc99c121929b654ad/1j16hpapk';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+</body>
+
+</html>

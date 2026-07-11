@@ -1,0 +1,29 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  margin: 0;
+}
+
+.hero {
+  background: linear-gradient(135deg, #00509e, #003366);
+  padding: 4rem 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer .socials i {
+  font-size: 1.4rem;
+  transition: transform 0.2s ease;
+}
+
+footer .socials i:hover {
+  transform: scale(1.2);
+  color: #0d6efd;
+}
